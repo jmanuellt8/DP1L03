@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- - sample-data.xml - - Copyright (c) 2019 Rafael Corchuelo. - - In keeping with the traditional purpose of furthering education and 
+	research, it is - the policy of the copyright owner to permit non-commercial use and redistribution of - this software. It has been tested 
+	carefully, but it is not guaranteed for any particular - purposes. The copyright owner does not offer any warranties or representations, 
+	nor do - they accept any liabilities with respect to them. -->
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="conversion-service.xml" />
+	
+		<!-- CUSTOMIZATION -->
+	
+	<bean id="customization" class="acme.entities.customization.Customization">
+	<property name = "spamWords" value="sex,hardcore,viagra,cialis,nigeria,you've won,you have won,million dollar,sexo,explícito,ha ganado,has ganado,millón de dólares" />
+	<property name="threshold" value="1.00"/>
+	</bean>
+
+	<!-- BRIONES BULLETINS -->
+
+	<bean id="brionesBulletin1" class="acme.entities.bulletins.BrionesBulletin">
+		<property name="name" value="Descartes" />
+		<property name="quote" value="cogito ergo sum" />
+		<property name="moment" value="2007/05/23 17:59" />
+	</bean>
+
+	<bean id="brionesBulletin2" class="acme.entities.bulletins.BrionesBulletin">
+		<property name="name" value="Steve Jobs" />
+		<property name="quote" value="Your time is limited. So don't waste it living someone else's life" />
+		<property name="moment" value="2006/04/21 18:30" />
+	</bean>
+
+	<bean id="brionesBulletin3" class="acme.entities.bulletins.BrionesBulletin">
+		<property name="name" value="Mahatma Gandhi" />
+		<property name="quote" value="No hay camino para la verdad, la verdad es el camino" />
+		<property name="moment" value="2018/09/11 12:21" />
+	</bean>
+
+	<!-- REQUESTS -->
+
+	<bean id="request1" class="acme.entities.entityRequest.EntityRequest">
+		<property name="ticker" value="RAVCD-12345" />
+		<property name="title" value="Junior Java Developer" />
+		<property name="description" value="job request fro Junior Java Developer" />
+		<property name="creationMoment" value="2019/08/09 13:55" />
+		<property name="deadline" value="2021/08/09 13:55" />
+		<property name="reward" value="2000.0" />
+	</bean>
+
+	<bean id="request2" class="acme.entities.entityRequest.EntityRequest">
+		<property name="ticker" value="RAWCD-12345" />
+		<property name="title" value="Junior C Developer" />
+		<property name="description" value="job request for Junior C Developer" />
+		<property name="creationMoment" value="2019/08/09 13:58" />
+		<property name="deadline" value="2021/08/09 13:58" />
+		<property name="reward" value="200.0" />
+	</bean>
+
+	<bean id="request3" class="acme.entities.entityRequest.EntityRequest">
+		<property name="ticker" value="RAXCD-12345" />
+		<property name="title" value="Junior Python Developer" />
+		<property name="description" value="job request for Junior Python Developer" />
+		<property name="creationMoment" value="2019/08/09 18:55" />
+		<property name="deadline" value="2021/08/09 18:55" />
+		<property name="reward" value="600.0" />
+	</bean>
+
+	<bean id="request4" class="acme.entities.entityRequest.EntityRequest">
+		<property name="ticker" value="RAYCD-12345" />
+		<property name="title" value="Junior Angular Developer" />
+		<property name="description" value="job request for Junior Angular Developer" />
+		<property name="creationMoment" value="2019/08/09 11:22" />
+		<property name="deadline" value="2021/08/09 11:22" />
+		<property name="reward" value="50.0" />
+	</bean>
+
+	<!-- CHALLENGES -->
+
+	<bean id="challenge1" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Calcular pi" />
+		<property name="description" value="consiste en calcular pi" />
+		<property name="deadline" value="2021/08/09 13:55" />
+		<property name="goldGoal" value="most popular person trophy" />
+		<property name="silverGoal" value="most popular person trophy" />
+		<property name="bronzeGoal" value="most popular person trophy" />
+		<property name="goldReward" value="1000.0" />
+		<property name="silverReward" value="500.0" />
+		<property name="bronzeReward" value="250.0" />
+	</bean>
+
+	<bean id="challenge2" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Crear algoritmo genético" />
+		<property name="description" value="consiste en crear un algoritmo genético" />
+		<property name="deadline" value="2021/08/19 13:22" />
+		<property name="goldGoal" value="most popular person trophy" />
+		<property name="silverGoal" value="most popular person trophy" />
+		<property name="bronzeGoal" value="most popular person trophy" />
+		<property name="goldReward" value="1000.0" />
+		<property name="silverReward" value="500.0" />
+		<property name="bronzeReward" value="250.0" />
+	</bean>
+
+	<bean id="challenge3" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Calcular número primo más grande conocido" />
+		<property name="description" value="consiste en calcular número primo más grande conocido" />
+		<property name="deadline" value="2021/08/12 16:55" />
+		<property name="goldGoal" value="most popular person trophy" />
+		<property name="silverGoal" value="most popular person trophy" />
+		<property name="bronzeGoal" value="most popular person trophy" />
+		<property name="goldReward" value="1000.0" />
+		<property name="silverReward" value="500.0" />
+		<property name="bronzeReward" value="250.0" />
+	</bean>
+
+	<bean id="challenge4" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Inventar Internet 2" />
+		<property name="description" value="consiste en inventar internet 2" />
+		<property name="deadline" value="2021/08/09 13:11" />
+		<property name="goldGoal" value="most popular person trophy" />
+		<property name="silverGoal" value="most popular person trophy" />
+		<property name="bronzeGoal" value="most popular person trophy" />
+		<property name="goldReward" value="1000.0" />
+		<property name="silverReward" value="500.0" />
+		<property name="bronzeReward" value="250.0" />
+	</bean>
+
+	<!-- Shouts -->
+
+	<bean id="shout01" class="acme.entities.shouts.Shout">
+		<property name="author" value="John Doe" />
+		<property name="text" value="I'm happy!" />
+		<property name="moment" value="2019/09/09 10:00" />
+	</bean>
+
+	<bean id="shout02" class="acme.entities.shouts.Shout">
+		<property name="author" value="Jane Doe" />
+		<property name="text" value="I'm the master of my room!" />
+		<property name="moment" value="2019/08/09 15:55" />
+	</bean>
+
+	<bean id="shout03" class="acme.entities.shouts.Shout">
+		<property name="author" value="Foo Bar" />
+		<property name="text" value="Just turning 20!" />
+		<property name="moment" value="2019/09/07 00:00" />
+	</bean>
+
+	<!-- GuerreroBulletins -->
+
+	<bean id="guerreroBulletin1" class="acme.entities.bulletins.GuerreroBulletin">
+		<property name="name" value="Kratos" />
+		<property name="quote" value="The cycle ends here." />
+		<property name="moment" value="2007/03/10 15:50" />
+	</bean>
+
+	<bean id="guerreroBulletin2" class="acme.entities.bulletins.GuerreroBulletin">
+		<property name="name" value="Nathan Drake" />
+		<property name="quote" value="Mi tesoro!" />
+		<property name="moment" value="2009/10/02 19:00" />
+	</bean>
+
+	<bean id="guerreroBulletin3" class="acme.entities.bulletins.GuerreroBulletin">
+		<property name="name" value="Geralt de Rivia" />
+		<property name="quote" value="Cirilla!" />
+		<property name="moment" value="2010/12/08 11:00" />
+	</bean>
+	
+	<!-- GarridooBulletins -->
+
+	<bean id="garridoBulletin1" class="acme.entities.bulletins.GarridoBulletin">
+		<property name="name" value="Mahatma Gandhi" />
+		<property name="quote" value="La violencia es el miedo a los ideales del otro" />
+		<property name="moment" value="1920/02/10 18:15" />
+	</bean>
+
+	<bean id="garridoBulletin2" class="acme.entities.bulletins.GarridoBulletin">
+		<property name="name" value="Albert Einstein" />
+		<property name="quote" value="Locura es hacer lo mismo una y otra vez esperando obtener resultados diferentes" />
+		<property name="moment" value="1940/10/02 18:15" />
+	</bean>
+
+	<bean id="garridoBulletin3" class="acme.entities.bulletins.GarridoBulletin">
+		<property name="name" value="David Bisbal" />
+		<property name="quote" value="Bulería, bulería, más te quiero cada día." />
+		<property name="moment" value="2003/12/08 08:00" />
+	</bean>
+
+	<!-- Announcements -->
+
+	<bean id="announcement01" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Sample announcement 01" />
+		<property name="moment" value="2019/06/10 10:35" />
+		<property name="moreInfo" value="http://www.example.com" />
+		<property name="text" value="This is the description of a sample announcement" />
+	</bean>
+
+	<bean id="announcement02" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Sample announcement 02" />
+		<property name="moment" value="2019/06/10 00:00" />
+		<property name="moreInfo" value="http://www.example.com" />
+		<property name="text" value="This is the description of another announcement" />
+	</bean>
+
+	<bean id="announcement03" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Probando fecha" />
+		<property name="moment" value="2019/10/01 00:00" />
+		<property name="moreInfo" value="http://www.example.com" />
+		<property name="text" value="This is the description of another announcement" />
+	</bean>
+
+	<bean id="announcement04" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Probando campo vacio" />
+		<property name="moment" value="2019/09/30 00:00" />
+		<property name="moreInfo" value="" />
+		<property name="text" value="This is the description of another announcement" />
+	</bean>
+
+	<bean id="announcement05" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Fecha mas temprana" />
+		<property name="moment" value="2019/10/29 20:00" />
+		<property name="moreInfo" value="http://www.example.com" />
+		<property name="text" value="This is the description of another announcement" />
+	</bean>
+
+	<bean id="announcement06" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Fecha buena" />
+		<property name="moment" value="2019/10/31 20:00" />
+		<property name="moreInfo" value="http://www.example.com" />
+		<property name="text" value="This is the description of another announcement" />
+	</bean>
+
+	<!-- Lobato Bulletins -->
+
+	<bean id="lobatoBulletin1" class="acme.entities.bulletins.LobatoBulletin">
+		<property name="moment" value="2017/05/05 09:15" />
+		<property name="writer" value="Pablo Delgado" />
+		<property name="subject" value="Fundamentos físicos de la informática" />
+	</bean>
+
+	<bean id="lobatoBulletin2" class="acme.entities.bulletins.LobatoBulletin">
+		<property name="moment" value="2017/03/05 08:45" />
+		<property name="writer" value="Víctor Guerrero" />
+		<property name="subject" value="Matemáticas" />
+	</bean>
+
+	<bean id="lobatoBulletin3" class="acme.entities.bulletins.LobatoBulletin">
+		<property name="moment" value="2017/04/05 10:00" />
+		<property name="writer" value="Antonio Morado" />
+		<property name="subject" value="Derecho Informático" />
+	</bean>
+
+	<!-- InvestorRecords -->
+
+	<bean id="investorRecord1" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="name" value="John Wick" />
+		<property name="sector" value="Tecnología" />
+		<property name="investingStatement" value="Voy a invertir en acciones de Google" />
+		<property name="stars" value="4" />
+	</bean>
+
+	<bean id="investorRecord2" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="name" value="Kimi Raikkonen" />
+		<property name="sector" value="Aeronáutica" />
+		<property name="investingStatement" value="Voy a invertir en acciones de Airbus" />
+		<property name="stars" value="3" />
+	</bean>
+
+	<bean id="investorRecord3" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="name" value="Kratos" />
+		<property name="sector" value="Alimentación" />
+		<property name="investingStatement" value="Voy a invertir en acciones de Mercadona" />
+		<property name="stars" value="" />
+	</bean>
+
+	<!-- CommercialBanner -->
+
+	<bean id="commercialBanner1" class="acme.entities.banners.CommercialBanner">
+		<property name="picture" value="https://picsum.photos/" />
+		<property name="slogan" value="¿A que no puedes comerte sólo una?" />
+		<property name="targetURL" value="https://www.pringles.com/es/home.html" />
+		<property name="brand" value="VISA" />
+		<property name="CVV" value="123" />
+		<property name="expirationMonth" value="10" />
+		<property name="expirationYear" value="2022" />
+	</bean>
+
+	<bean id="commercialBanner2" class="acme.entities.banners.CommercialBanner">
+		<property name="picture" value="https://picsum.photos/" />
+		<property name="slogan" value="Just Do it!" />
+		<property name="targetURL" value="https://www.nike.com/es/" />
+		<property name="brand" value="MASTER CARD" />
+		<property name="CVV" value="486" />
+		<property name="expirationMonth" value="2" />
+		<property name="expirationYear" value="2021" />
+	</bean>
+
+	<bean id="commercialBanner3" class="acme.entities.banners.CommercialBanner">
+		<property name="picture" value="https://picsum.photos/" />
+		<property name="slogan" value="Impossible is nothing!" />
+		<property name="targetURL" value="https://www.adidas.es/" />
+		<property name="brand" value="AMERICAN EXPRESS" />
+		<property name="CVV" value="155" />
+		<property name="expirationMonth" value="10" />
+		<property name="expirationYear" value="2024" />
+	</bean>
+
+	<bean id="commercialBanner4" class="acme.entities.banners.CommercialBanner">
+		<property name="picture" value="https://picsum.photos/" />
+		<property name="slogan" value="¿Te gusta conducir?" />
+		<property name="targetURL" value="https://www.bmw.es/es/index.html" />
+		<property name="brand" value="VISA" />
+		<property name="CVV" value="963" />
+		<property name="expirationMonth" value="11" />
+		<property name="expirationYear" value="2020" />
+	</bean>
+
+	<!-- NonCommercialBanner -->
+
+	<bean id="NonCommercialBanner" class="acme.entities.banners.NonCommercialBanner">
+		<property name="picture" value="https://picsum.photos/" />
+		<property name="slogan" value="Im loving it" />
+		<property name="targetURL" value="https://www.mcdonalds.es" />
+		<property name="jingle" value="Parapapapá Im loving it!" />
+	</bean>
+
+	<bean id="NonCommercialBanner1" class="acme.entities.banners.NonCommercialBanner">
+		<property name="picture" value="https://picsum.photos/" />
+		<property name="slogan" value="Open happiness" />
+		<property name="targetURL" value="https://www.cocacola.es/es/home/" />
+		<property name="jingle" value="Oscar Mayer “I Wish I Was an Oscar Mayer Weiner”" />
+	</bean>
+
+	<bean id="NonCommercialBanner2" class="acme.entities.banners.NonCommercialBanner">
+		<property name="picture" value="https://picsum.photos/" />
+		<property name="slogan" value="The power to surprise" />
+		<property name="targetURL" value="https://www.kia.com/worldwide/about_kia/brand/brand_identity.do" />
+		<property name="jingle" value="Kia kia kia kia kia kia kia" />
+	</bean>
+
+	<!-- horilloBulletins -->
+
+	<bean id="horrilloBulletin01" class="acme.entities.bulletins.HorrilloBulletin">
+		<property name="title" value="John: Report" />
+		<property name="text" value="All good" />
+		<property name="moment" value="2019/06/09 15:33" />
+	</bean>
+
+	<bean id="horrilloBulletin02" class="acme.entities.bulletins.HorrilloBulletin">
+		<property name="title" value="Diego" />
+		<property name="text" value="I dont know nothing" />
+		<property name="moment" value="2019/08/11 12:05" />
+	</bean>
+
+	<bean id="horrilloBulletin03" class="acme.entities.bulletins.HorrilloBulletin">
+		<property name="title" value="Joaquin" />
+		<property name="text" value="I'm a phoenix" />
+		<property name="moment" value="2019/10/10 22:10" />
+	</bean>
+
+	<!-- PerezBulletin -->
+
+	<bean id="perezBulletin01" class="acme.entities.bulletins.PerezBulletin">
+		<property name="title" value="Brayan" />
+		<property name="content" value="Noticias" />
+		<property name="moment" value="2019/08/09 13:55" />
+	</bean>
+
+	<bean id="perezBulletin02" class="acme.entities.bulletins.PerezBulletin">
+		<property name="title" value="Brayan Perez" />
+		<property name="content" value="Grupo de DP1" />
+		<property name="moment" value="2019/08/07 16:00" />
+	</bean>
+
+	<bean id="perezBulletin03" class="acme.entities.bulletins.PerezBulletin">
+		<property name="title" value="Brayan Nicolas" />
+		<property name="content" value="I'm 22" />
+		<property name="moment" value="2019/08/09 22:30" />
+	</bean>
+
+	<!-- Offers -->
+
+	<bean id="offer01" class="acme.entities.offers.Offer">
+		<property name="ticker" value="OAAAA-12345" />
+		<property name="title" value="Oferta de empleo" />
+		<property name="moment" value="2019/08/09 13:55" />
+		<property name="deadline" value="2019/11/10 15:00" />
+		<property name="text" value="Descripción de la oferta..." />
+		<property name="rangeFrom">
+			<bean class="acme.framework.datatypes.Money">
+				<property name="amount" value="10.00" />
+				<property name="currency" value="€" />
+			</bean>
+		</property>
+		<property name="rangeTo">
+			<bean class="acme.framework.datatypes.Money">
+				<property name="amount" value="25.00" />
+				<property name="currency" value="€" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="offer02" class="acme.entities.offers.Offer">
+		<property name="ticker" value="OBBBB-12345" />
+		<property name="title" value="Oferta de empleo 2" />
+		<property name="moment" value="2019/08/09 18:55" />
+		<property name="deadline" value="2019/11/20 20:00" />
+		<property name="text" value="Descripción de la oferta..." />
+		<property name="rangeFrom">
+			<bean class="acme.framework.datatypes.Money">
+				<property name="amount" value="50.00" />
+				<property name="currency" value="€" />
+			</bean>
+		</property>
+		<property name="rangeTo">
+			<bean class="acme.framework.datatypes.Money">
+				<property name="amount" value="80.00" />
+				<property name="currency" value="€" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="offer03" class="acme.entities.offers.Offer">
+		<property name="ticker" value="OCCCC-12345" />
+		<property name="title" value="Oferta de empleo 3" />
+		<property name="moment" value="2019/07/09 18:55" />
+		<property name="deadline" value="2019/12/05 20:00" />
+		<property name="text" value="Descripción de la oferta..." />
+		<property name="rangeFrom">
+			<bean class="acme.framework.datatypes.Money">
+				<property name="amount" value="10.00" />
+				<property name="currency" value="€" />
+			</bean>
+		</property>
+		<property name="rangeTo">
+			<bean class="acme.framework.datatypes.Money">
+				<property name="amount" value="80.00" />
+				<property name="currency" value="€" />
+			</bean>
+		</property>
+	</bean>
+
+	<!-- CompanyRecords -->
+
+	<bean id="CompanyRecord01" class="acme.entities.records.CompanyRecord">
+		<property name="companyName" value="Vitalia, Inc." />
+		<property name="sector" value="Health" />
+		<property name="CEOName" value="Pedro Martinez Castaño" />
+		<property name="activitiesDescription" value="We help people" />
+		<property name="website" value="http://www.vitalplus.es" />
+		<property name="phone" value="958475632" />
+		<property name="email" value="vitalia@gmail.com" />
+		<property name="stars" value="5" />
+	</bean>
+
+	<bean id="CompanyRecord02" class="acme.entities.records.CompanyRecord">
+		<property name="companyName" value="Cobentry" />
+		<property name="sector" value="Insurance" />
+		<property name="CEOName" value="Petra Viskzomij Uthre" />
+		<property name="activitiesDescription" value="We assure people" />
+		<property name="website" value="http://www.cobntry.es" />
+		<property name="phone" value="677485231" />
+		<property name="email" value="cobinsurance@tekka.ru" />
+		<property name="stars" value="5" />
+	</bean>
+
+	<bean id="CompanyRecord03" class="acme.entities.records.CompanyRecord">
+		<property name="companyName" value="Propaphone,inc." />
+		<property name="sector" value="Tecnology" />
+		<property name="CEOName" value="Peter Martin ChestTree" />
+		<property name="activitiesDescription" value="We tech! people" />
+		<property name="website" value="http://www.propaphone.com" />
+		<property name="phone" value="7724887785" />
+		<property name="email" value="propa@phone.com" />
+		<property name="stars"><null />
+		</property>
+	</bean>
+	
+	<bean id="CompanyRecord04" class="acme.entities.records.CompanyRecord">
+		<property name="companyName" value="TecnoHouse, PLL" />
+		<property name="sector" value="Tecnology" />
+		<property name="CEOName" value="John Wilson Terrier" />
+		<property name="activitiesDescription" value="We tech! people more than the others" />
+		<property name="website" value="http://www.tecnohouse.com" />
+		<property name="phone" value="875488757" />
+		<property name="email" value="houseoftecno@gmail.com" />
+		<property name="stars" value = "3">
+		</property>
+	</bean>
+	
+	<bean id="CompanyRecord05" class="acme.entities.records.CompanyRecord">
+		<property name="companyName" value="Hospitalet, inc." />
+		<property name="sector" value="Health" />
+		<property name="CEOName" value="ALICIA DEL POZO BERNABEU" />
+		<property name="activitiesDescription" value="We cure! people" />
+		<property name="website" value="http://www.hospitalet.com" />
+		<property name="phone" value="772588757" />
+		<property name="email" value="enterprise@hospita.let.com" />
+		<property name="stars" value="4">
+		</property>
+	</bean>
+
+</beans>
