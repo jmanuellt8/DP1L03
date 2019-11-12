@@ -19,6 +19,7 @@
 	<acme:form-textbox code="administrator.investor-record.form.label.name" path="name" />
 	<acme:form-textbox code="administrator.investor-record.form.label.sector" path="sector" />
 	<acme:form-textarea code="administrator.investor-record.form.label.statement" path="investingStatement" />
+	
 	<jstl:if test="${command !='create'}">
 		<acme:form-textarea code="administrator.investor-record.form.label.stars" path="stars" />
 	</jstl:if>

@@ -16,6 +16,7 @@ administrator.investor-record.list.label.stars = Valoración
 administrator.investor-record.form.label.name = Nombre
 administrator.investor-record.form.label.sector = Sector
 administrator.investor-record.form.label.statement = Declaración de inversión
+administrator.investor-record.form.label.stars = Valoración
 administrator.investor-record.form.button.create = Enviar
 administrator.investor-record.form.button.return = Cancelar
 administrator.investor-record.form.button.delete = Eliminar

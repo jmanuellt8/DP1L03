@@ -85,6 +85,8 @@
         	<acme:menu-suboption code="master.menu.administrator.customization.list" action="/administrator/customization/list"/>
         	<acme:menu-separator/>
         	<acme:menu-suboption code="master.menu.administrator.investor-record.list" action="/administrator/investor-record/list"/>
+        	<acme:menu-separator/>
+        	<acme:menu-suboption code="master.menu.administrator.investor-record.create" action="/administrator/investor-record/create"/>
         </acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
