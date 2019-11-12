@@ -26,16 +26,12 @@ public class AnonymousInvestorRecordController extends AbstractController<Anonym
 	@Autowired
 	private AnonymousInvestorRecordShowService			showService;
 
-	@Autowired
-	private AnonymousInvestorRecordCreateService		createService;
-
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addCustomCommand(CustomCommand.TOP, BasicCommand.LIST, this.listTopFiveService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
-		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 	}
 
 }

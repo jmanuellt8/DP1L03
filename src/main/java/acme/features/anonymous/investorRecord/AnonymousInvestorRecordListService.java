@@ -41,7 +41,7 @@ public class AnonymousInvestorRecordListService implements AbstractListService<A
 		assert request != null;
 
 		//Another option for this findMany is findAll
-		return this.repository.findMany();
+		return this.repository.findManyInvestorRecords();
 		//return null;
 	}
 

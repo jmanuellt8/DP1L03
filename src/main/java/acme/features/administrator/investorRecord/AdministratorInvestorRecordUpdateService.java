@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.investorRecord;
+package acme.features.administrator.investorRecord;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,14 +8,14 @@ import acme.entities.investorRecords.InvestorRecord;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
-import acme.framework.services.AbstractCreateService;
+import acme.framework.entities.Administrator;
+import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class AuthenticatedInvestorRecordCreateService implements AbstractCreateService<Authenticated, InvestorRecord> {
+public class AdministratorInvestorRecordUpdateService implements AbstractUpdateService<Administrator, InvestorRecord> {
 
 	@Autowired
-	private AuthenticatedInvestorRecordRepository repository;
+	AdministratorInvestorRecordRepository repository;
 
 
 	@Override
@@ -32,6 +32,7 @@ public class AuthenticatedInvestorRecordCreateService implements AbstractCreateS
 		assert errors != null;
 
 		request.bind(entity, errors);
+
 	}
 
 	@Override
@@ -44,17 +45,16 @@ public class AuthenticatedInvestorRecordCreateService implements AbstractCreateS
 	}
 
 	@Override
-	public InvestorRecord instantiate(final Request<InvestorRecord> request) {
+	public InvestorRecord findOne(final Request<InvestorRecord> request) {
 		assert request != null;
 
-		InvestorRecord record = new InvestorRecord();
+		InvestorRecord result;
+		int id;
 
-		record.setName("");
-		record.setSector("");
-		record.setInvestingStatement("");
-		record.setStars(0);
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOneInvestorRecordById(id);
 
-		return record;
+		return result;
 	}
 
 	@Override
@@ -62,11 +62,10 @@ public class AuthenticatedInvestorRecordCreateService implements AbstractCreateS
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-
 	}
 
 	@Override
-	public void create(final Request<InvestorRecord> request, final InvestorRecord entity) {
+	public void update(final Request<InvestorRecord> request, final InvestorRecord entity) {
 		assert request != null;
 		assert entity != null;
 

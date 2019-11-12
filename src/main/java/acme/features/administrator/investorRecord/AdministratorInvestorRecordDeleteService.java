@@ -1,5 +1,5 @@
 
-package acme.features.anonymous.investorRecord;
+package acme.features.administrator.investorRecord;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,14 +8,14 @@ import acme.entities.investorRecords.InvestorRecord;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Anonymous;
-import acme.framework.services.AbstractCreateService;
+import acme.framework.entities.Administrator;
+import acme.framework.services.AbstractDeleteService;
 
 @Service
-public class AnonymousInvestorRecordCreateService implements AbstractCreateService<Anonymous, InvestorRecord> {
+public class AdministratorInvestorRecordDeleteService implements AbstractDeleteService<Administrator, InvestorRecord> {
 
 	@Autowired
-	private AnonymousInvestorRecordRepository repository;
+	private AdministratorInvestorRecordRepository repository;
 
 
 	@Override
@@ -44,17 +44,16 @@ public class AnonymousInvestorRecordCreateService implements AbstractCreateServi
 	}
 
 	@Override
-	public InvestorRecord instantiate(final Request<InvestorRecord> request) {
+	public InvestorRecord findOne(final Request<InvestorRecord> request) {
 		assert request != null;
 
-		InvestorRecord record = new InvestorRecord();
+		InvestorRecord result;
+		int id;
 
-		record.setName("");
-		record.setSector("");
-		record.setInvestingStatement("");
-		record.setStars(0);
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOneInvestorRecordById(id);
 
-		return record;
+		return result;
 	}
 
 	@Override
@@ -62,15 +61,14 @@ public class AnonymousInvestorRecordCreateService implements AbstractCreateServi
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-
 	}
 
 	@Override
-	public void create(final Request<InvestorRecord> request, final InvestorRecord entity) {
+	public void delete(final Request<InvestorRecord> request, final InvestorRecord entity) {
 		assert request != null;
 		assert entity != null;
 
-		this.repository.save(entity);
+		this.repository.delete(entity);
 	}
 
 }

@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.investorRecord;
+package acme.features.administrator.investorRecord;
 
 import java.util.Collection;
 
@@ -9,14 +9,14 @@ import org.springframework.stereotype.Service;
 import acme.entities.investorRecords.InvestorRecord;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
+import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedInvestorRecordListService implements AbstractListService<Authenticated, InvestorRecord> {
+public class AdministratorInvestorRecordListService implements AbstractListService<Administrator, InvestorRecord> {
 
 	@Autowired
-	private AuthenticatedInvestorRecordRepository repository;
+	private AdministratorInvestorRecordRepository repository;
 
 
 	@Override

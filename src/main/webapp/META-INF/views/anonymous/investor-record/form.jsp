@@ -19,12 +19,6 @@
 	<acme:form-textbox code="anonymous.investor-record.form.label.name" path="name"/>
 	<acme:form-textbox code="anonymous.investor-record.form.label.sector" path="sector"/>
 	<acme:form-textarea code="anonymous.investor-record.form.label.statement" path="investingStatement"/>
-	
-	<!-- <!--
-	Aquí debería ir esta tag
-	<acme:form-textarea code="anonymous.investor-record.form.label.stars" path="stars"/>
-	Pero no sé si esa entidad es derivada o no, así que lo dejo preparado por si acaso no lo fuera.
-	Si no lo es, queda añadir a los mensajes de internacionalización ese code. -->
 
   	<acme:form-return code="anonymous.investor-record.form.button.return"/>
 </acme:form>

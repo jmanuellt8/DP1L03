@@ -63,6 +63,7 @@ master.menu.administrator.announcement.list = Lista de anuncios
 master.menu.administrator.customization.show = Customizacion
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.customization.list = Customizacion
+master.menu.administrator.investor-record.list = Lista de registro de inversionistas
 
 # master.menu.provider ########################################################
 
