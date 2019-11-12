@@ -269,7 +269,21 @@
 		<property name="name" value="Kratos" />
 		<property name="sector" value="Alimentación" />
 		<property name="investingStatement" value="Voy a invertir en acciones de Mercadona" />
-		<property name="stars" value="" />
+		<property name="stars" value="0" />
+	</bean>
+	
+	<bean id="investorRecord4" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="name" value="Michael" />
+		<property name="sector" value="Tecnología" />
+		<property name="investingStatement" value="Voy a invertir en acciones de Microsoft" />
+		<property name="stars" value="5" />
+	</bean>
+	
+	<bean id="investorRecord5" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="name" value="Verstappen" />
+		<property name="sector" value="Tecnología" />
+		<property name="investingStatement" value="Voy a invertir en acciones de Apple" />
+		<property name="stars" value="5" />
 	</bean>
 
 	<!-- CommercialBanner -->

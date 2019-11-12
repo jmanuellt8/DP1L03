@@ -25,5 +25,9 @@
 	<definition name="anonymous/investor-record/list" extends="master">		
 		<put-attribute name="body" type="template" value="../anonymous/investor-record/list.jsp" />
 	</definition>
+	
+	<definition name="anonymous/investor-record/top" extends="master">		
+		<put-attribute name="body" type="template" value="../anonymous/investor-record/list.jsp" />
+	</definition>
 
 </tiles-definitions>

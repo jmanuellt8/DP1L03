@@ -52,7 +52,7 @@ public class AnonymousInvestorRecordCreateService implements AbstractCreateServi
 		record.setName("");
 		record.setSector("");
 		record.setInvestingStatement("");
-		record.setStars("");
+		record.setStars(0);
 
 		return record;
 	}
