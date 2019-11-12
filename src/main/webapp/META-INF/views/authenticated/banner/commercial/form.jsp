@@ -16,10 +16,10 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
-<acme:form readonly="true">
+<acme:form>
 	<fieldset>
 	<legend>
-		<spring:message code="authenticated.banner.commercial.banner" />
+		<acme:message code="authenticated.banner.commercial.banner" />
 	</legend>
 		<acme:form-textbox code="authenticated.banner.commercial.picture" path="picture" />
 		<acme:form-textbox code="authenticated.banner.commercial.slogan" path="slogan" />
@@ -27,13 +27,33 @@
 	</fieldset>
 	<fieldset>
 		<legend>
-			<spring:message code="authenticated.banner.commercial.creditCard" />
+			<acme:message code="authenticated.banner.commercial.creditCard" />
 		</legend>
 		<acme:form-textbox code="authenticated.banner.commercial.brand" path="brand" />
 		<acme:form-textbox code="authenticated.banner.commercial.cvv" path="CVV" />
 		<acme:form-textbox code="authenticated.banner.commercial.expMonth" path="expirationMonth" />
 		<acme:form-textbox code="authenticated.banner.commercial.expYear" path="expirationYear" />
 	</fieldset>
+
+	<acme:form-submit test="${command == 'show'}"
+					  code="authenticated.banner.commercial.form.button.update"
+					  action="/authenticated/commercial-banner/update"/>
+
+	<acme:form-submit test="${command == 'show'}"
+					  code="authenticated.banner.commercial.form.button.delete"
+					  action="/authenticated/commercial-banner/delete"/>
+
+	<acme:form-submit test="${command == 'create'}"
+					  code="authenticated.banner.commercial.form.button.create"
+					  action="/authenticated/commercial-banner/create"/>
+
+	<acme:form-submit test="${command == 'update'}"
+					  code="authenticated.banner.commercial.form.button.update"
+					  action="/authenticated/commercial-banner/update"/>
+
+	<acme:form-submit test="${command == 'delete'}"
+					  code="authenticated.banner.commercial.form.button.delete"
+					  action="/authenticated/commercial-banner/delete"/>
 
 	<acme:form-return code="authenticated.banner.commercial.form.button.return" />
 

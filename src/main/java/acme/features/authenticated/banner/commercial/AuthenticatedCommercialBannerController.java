@@ -25,6 +25,10 @@ public class AuthenticatedCommercialBannerController extends AbstractController<
 	@Autowired
 	private AuthenticatedCommercialBannerShowService	showService;
 
+	@Autowired
+	private AuthenticatedCommercialBannerUpdateService	updateService;
+	//TODO: Añadir esto al inis... y en el commercial banner igual
+
 
 	@PostConstruct
 	private void initialise() {

@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.banner.commercial.form.button.create = Register
+authenticated.banner.commercial.form.button.create = Create
 authenticated.banner.commercial.form.button.return = Return
 
 authenticated.banner.commercial.banner = Banner fields
@@ -24,3 +24,6 @@ authenticated.banner.commercial.expYear = Expiration Year
 
 banner.commercial.slogan = Slogan
 banner.commercial.targetURL = Target URL
+
+authenticated.banner.commercial.form.button.update = Update
+authenticated.banner.commercial.form.button.delete = Delete

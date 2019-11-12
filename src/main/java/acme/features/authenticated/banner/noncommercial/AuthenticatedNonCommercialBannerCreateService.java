@@ -14,62 +14,63 @@ import acme.framework.services.AbstractCreateService;
 @Service
 public class AuthenticatedNonCommercialBannerCreateService implements AbstractCreateService<Authenticated, NonCommercialBanner> {
 
-	@Autowired
-	private AuthenticatedNonCommercialBannerRepository repository;
+    @Autowired
+    private AuthenticatedNonCommercialBannerRepository repository;
 
 
-	@Override
-	public boolean authorise(final Request<NonCommercialBanner> request) {
-		assert request != null;
+    @Override
+    public boolean authorise(final Request<NonCommercialBanner> request) {
+        assert request != null;
 
-		return true;
-	}
+        return true;
+    }
 
-	@Override
-	public void bind(final Request<NonCommercialBanner> request, final NonCommercialBanner entity, final Errors errors) {
-		assert request != null;
-		assert entity != null;
-		assert errors != null;
+    @Override
+    public void bind(final Request<NonCommercialBanner> request, final NonCommercialBanner entity, final Errors errors) {
+        assert request != null;
+        assert entity != null;
+        assert errors != null;
 
-		request.bind(entity, errors);
+        request.bind(entity, errors);
 
-	}
+    }
 
-	@Override
-	public void unbind(final Request<NonCommercialBanner> request, final NonCommercialBanner entity, final Model model) {
-		assert request != null;
-		assert entity != null;
-		assert model != null;
+    @Override
+    public void unbind(final Request<NonCommercialBanner> request, final NonCommercialBanner entity, final Model model) {
+        assert request != null;
+        assert entity != null;
+        assert model != null;
 
-		request.unbind(entity, model, "picture", "slogan", "targetURL", "jingle");
+        request.unbind(entity, model, "picture", "slogan", "targetURL", "jingle");
 
-	}
+    }
 
-	@Override
-	public NonCommercialBanner instantiate(final Request<NonCommercialBanner> request) {
-		NonCommercialBanner ncb = new NonCommercialBanner();
+    @Override
+    public NonCommercialBanner instantiate(final Request<NonCommercialBanner> request) {
+        NonCommercialBanner ncb = new NonCommercialBanner();
 
-		ncb.setJingle("");
-		ncb.setPicture("");
-		ncb.setSlogan("");
-		ncb.setTargetURL("");
+        ncb.setJingle("");
+        ncb.setPicture("");
+        ncb.setSlogan("");
+        ncb.setTargetURL("");
 
-		return ncb;
-	}
+        return ncb;
+    }
 
-	@Override
-	public void validate(final Request<NonCommercialBanner> request, final NonCommercialBanner entity, final Errors errors) {
-		assert request != null;
-		assert entity != null;
-		assert errors != null;
+    @Override
+    public void validate(final Request<NonCommercialBanner> request, final NonCommercialBanner entity, final Errors errors) {
+        assert request != null;
+        assert entity != null;
+        assert errors != null;
 
-	}
+    }
 
-	@Override
-	public void create(final Request<NonCommercialBanner> request, final NonCommercialBanner entity) {
+    @Override
+    public void create(final Request<NonCommercialBanner> request, final NonCommercialBanner entity) {
+        assert request != null;
+        assert entity != null;
 
-		this.repository.save(entity);
-
-	}
+        this.repository.save(entity);
+    }
 
 }

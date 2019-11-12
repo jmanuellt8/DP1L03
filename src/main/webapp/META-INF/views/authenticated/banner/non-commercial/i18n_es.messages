@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.banner.non-commercial.form.button.create = Registrar
+authenticated.banner.non-commercial.form.button.create = Crear
 authenticated.banner.non-commercial.form.button.return = Volver
 
 authenticated.banner.non-commercial.banner = Campos del banner
@@ -19,3 +19,6 @@ authenticated.banner.non-commercial.jingle = Tintineo
 
 banner.non-commercial.slogan = Eslogan
 banner.non-commercial.targetURL = URL Destino
+
+authenticated.banner.non-commercial.form.button.update = Actualizar
+authenticated.banner.non-commercial.form.button.delete = Borrar
