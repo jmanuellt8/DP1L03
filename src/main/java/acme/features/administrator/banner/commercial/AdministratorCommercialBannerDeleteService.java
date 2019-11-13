@@ -1,21 +1,23 @@
-package acme.features.authenticated.banner.commercial;
+package acme.features.administrator.banner.commercial;
 
 import acme.entities.banners.CommercialBanner;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Administrator;
 import acme.framework.entities.Authenticated;
-import acme.framework.services.AbstractUpdateService;
+import acme.framework.services.AbstractDeleteService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public class AuthenticatedCommercialBannerUpdateService implements AbstractUpdateService<Authenticated, CommercialBanner> {
-
+@Service
+public class AdministratorCommercialBannerDeleteService implements AbstractDeleteService<Administrator, CommercialBanner> {
     @Autowired
-    private AuthenticatedCommercialBannerRepository repository;
+    private AdministratorCommercialBannerRepository repository;
+
     @Override
     public boolean authorise(Request<CommercialBanner> request) {
-        assert request != null;
-
+        assert  request != null;
         return true;
     }
 
@@ -39,7 +41,7 @@ public class AuthenticatedCommercialBannerUpdateService implements AbstractUpdat
 
     @Override
     public CommercialBanner findOne(Request<CommercialBanner> request) {
-        assert request != null;
+
         return this.repository.findOne(request.getModel().getInteger("id"));
     }
 
@@ -51,10 +53,11 @@ public class AuthenticatedCommercialBannerUpdateService implements AbstractUpdat
     }
 
     @Override
-    public void update(Request<CommercialBanner> request, CommercialBanner entity) {
+    public void delete(Request<CommercialBanner> request, CommercialBanner entity) {
         assert request != null;
         assert entity != null;
 
-        this.repository.save(entity);
+        this.repository.delete(entity);
+
     }
 }

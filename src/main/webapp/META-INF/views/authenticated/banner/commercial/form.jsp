@@ -16,7 +16,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
-<acme:form>
+<acme:form readonly="true">
 	<fieldset>
 	<legend>
 		<acme:message code="authenticated.banner.commercial.banner" />
@@ -34,26 +34,6 @@
 		<acme:form-textbox code="authenticated.banner.commercial.expMonth" path="expirationMonth" />
 		<acme:form-textbox code="authenticated.banner.commercial.expYear" path="expirationYear" />
 	</fieldset>
-
-	<acme:form-submit test="${command == 'show'}"
-					  code="authenticated.banner.commercial.form.button.update"
-					  action="/authenticated/commercial-banner/update"/>
-
-	<acme:form-submit test="${command == 'show'}"
-					  code="authenticated.banner.commercial.form.button.delete"
-					  action="/authenticated/commercial-banner/delete"/>
-
-	<acme:form-submit test="${command == 'create'}"
-					  code="authenticated.banner.commercial.form.button.create"
-					  action="/authenticated/commercial-banner/create"/>
-
-	<acme:form-submit test="${command == 'update'}"
-					  code="authenticated.banner.commercial.form.button.update"
-					  action="/authenticated/commercial-banner/update"/>
-
-	<acme:form-submit test="${command == 'delete'}"
-					  code="authenticated.banner.commercial.form.button.delete"
-					  action="/authenticated/commercial-banner/delete"/>
 
 	<acme:form-return code="authenticated.banner.commercial.form.button.return" />
 

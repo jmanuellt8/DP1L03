@@ -1,16 +1,15 @@
 
 package acme.features.authenticated.banner.commercial;
 
-import java.util.Collection;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import acme.entities.banners.CommercialBanner;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.Collection;
 
 @Service
 public class AuthenticatedCommercialBannerListService implements AbstractListService<Authenticated, CommercialBanner> {

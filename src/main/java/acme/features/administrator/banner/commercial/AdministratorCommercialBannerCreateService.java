@@ -1,24 +1,24 @@
 
-package acme.features.authenticated.banner.commercial;
-
-import java.time.Year;
-import java.util.Date;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+package acme.features.administrator.banner.commercial;
 
 import acme.entities.banners.CommercialBanner;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Administrator;
 import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractCreateService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.time.Year;
+import java.util.Date;
 
 @Service
-public class AuthenticatedCommercialBannerCreateService implements AbstractCreateService<Authenticated, CommercialBanner> {
+public class AdministratorCommercialBannerCreateService implements AbstractCreateService<Administrator, CommercialBanner> {
 
 	@Autowired
-	private AuthenticatedCommercialBannerRepository repository;
+	private AdministratorCommercialBannerRepository repository;
 
 
 	@Override

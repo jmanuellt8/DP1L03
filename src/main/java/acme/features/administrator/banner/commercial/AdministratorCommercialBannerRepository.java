@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.banner.commercial;
+package acme.features.administrator.banner.commercial;
 
 import acme.entities.banners.CommercialBanner;
 import acme.framework.repositories.AbstractRepository;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Collection;
 
 @Repository
-public interface AuthenticatedCommercialBannerRepository extends AbstractRepository {
+public interface AdministratorCommercialBannerRepository extends AbstractRepository {
 
 	@Query("select cb from CommercialBanner cb")
 	Collection<CommercialBanner> findMany();
