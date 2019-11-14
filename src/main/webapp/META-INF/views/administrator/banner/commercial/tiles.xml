@@ -22,8 +22,8 @@
 		<put-attribute name="body" type="template" value="../administrator/banner/commercial/form.jsp" />
 	</definition>
 	
-	<definition name="authenticated/commercial-banner/list" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/banner/commercial/list.jsp" />
+	<definition name="administrator/commercial-banner/list" extends="master">
+		<put-attribute name="body" type="template" value="../administrator/banner/commercial/list.jsp" />
 	</definition>
 	
 </tiles-definitions>

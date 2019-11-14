@@ -11,7 +11,7 @@
 administrator.banner.non-commercial.form.button.create = Crear
 administrator.banner.non-commercial.form.button.return = Volver
 
-administrator.banner.non-commercial.banner = Campos del banner
+administrator.banner.non-commercial.banner = Campos del banner no comercial
 administrator.banner.non-commercial.picture = Foto
 administrator.banner.non-commercial.slogan = Eslogan
 administrator.banner.non-commercial.targetURL = URL objetivo

@@ -25,6 +25,12 @@ public class AdministratorCommercialBannerController extends AbstractController<
 	@Autowired
 	private AdministratorCommercialBannerDeleteService	deleteService;
 
+	@Autowired
+	private AdministratorCommercialBannerListService listService;
+
+	@Autowired
+	private AdministratorCommercialBannerShowService showService;
+
 	//TODO: Añadir método de show y de list para el administrador
 
 
@@ -32,6 +38,8 @@ public class AdministratorCommercialBannerController extends AbstractController<
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
-		super.addBasicCommand(BasicCommand.DELETE, deleteService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
+		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 }

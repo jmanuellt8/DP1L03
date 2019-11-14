@@ -19,7 +19,7 @@
 <acme:form>
 	<fieldset>
 	<legend>
-		<acme:message code=".banner.commercial.banner" />
+		<acme:message code="administrator.banner.commercial.banner" />
 	</legend>
 		<acme:form-textbox code="administrator.banner.commercial.picture" path="picture" />
 		<acme:form-textbox code="administrator.banner.commercial.slogan" path="slogan" />

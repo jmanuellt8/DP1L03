@@ -11,7 +11,7 @@
 administrator.banner.commercial.form.button.create = Create
 administrator.banner.commercial.form.button.return = Return
 
-administrator.banner.commercial.banner = Banner fields
+administrator.banner.commercial.banner = Commercial banner fields
 administrator.banner.commercial.picture = Picture
 administrator.banner.commercial.slogan = Slogan
 administrator.banner.commercial.targetURL = Target URL
