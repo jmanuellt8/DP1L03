@@ -40,6 +40,7 @@ master.menu.anonymous.announcement.list = Announcement's list
 master.menu.anonymous.investor-record.list = Investor Record's list
 master.menu.anonymous.fav-link = Favourite link
 master.menu.anonymous.company-record = Company records's list
+master.menu.anonymous.company-record.top = Top Company records
 
 # master.menu.authenticated #######################################################
 
@@ -62,6 +63,8 @@ master.menu.administrator.announcement.list = Announcement's list
 master.menu.administrator.customization.show = Customization
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.customization.list = Customization
+master.menu.administrator.company-record.list = Company Records
+master.menu.administrator.company-record.create = New Company Record
 
 # master.menu.provider ########################################################
 

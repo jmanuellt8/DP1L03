@@ -40,6 +40,7 @@ master.menu.anonymous.announcement.list = Lista de anuncios
 master.menu.anonymous.investor-record.list = Lista de inversiones
 master.menu.anonymous.fav-link = Link favorito
 master.menu.anonymous.company-record = Registro de compañias
+master.menu.anonymous.company-record.top = Top registro de compañias
 
 # master.menu.authenticated #######################################################
 
@@ -62,6 +63,8 @@ master.menu.administrator.announcement.list = Lista de anuncios
 master.menu.administrator.customization.show = Customizacion
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.customization.list = Customizacion
+master.menu.administrator.company-record.list = Compañias
+master.menu.administrator.company-record.create = Nueva Compañia
 
 # master.menu.provider ########################################################
 
