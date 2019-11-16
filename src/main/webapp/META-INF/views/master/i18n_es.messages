@@ -62,6 +62,7 @@ master.menu.administrator.announcement.list = Lista de anuncios
 master.menu.administrator.customization.show = Customizacion
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.customization.list = Customizacion
+master.menu.administrator.announcement.create = Crear anuncio
 
 # master.menu.provider ########################################################
 
