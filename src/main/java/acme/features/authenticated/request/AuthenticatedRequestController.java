@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.entityRequest;
+package acme.features.authenticated.request;
 
 import javax.annotation.PostConstruct;
 
@@ -7,25 +7,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.entityRequest.EntityRequest;
+import acme.entities.request.Request_;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/authenticated/entity-request/")
-public class AuthenticatedEntityRequestController extends AbstractController<Authenticated, EntityRequest> {
+@RequestMapping("/authenticated/request/")
+public class AuthenticatedRequestController extends AbstractController<Authenticated, Request_> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AuthenticatedEntityRequestListService	listService;
+	private AuthenticatedRequestListService	listService;
 
 	@Autowired
-	private AuthenticatedEntityRequestShowService	showService;
+	private AuthenticatedRequestShowService	showService;
+
 
 	// Constructors -----------------------------------------------------------
-
 
 	@PostConstruct
 	private void initialise() {

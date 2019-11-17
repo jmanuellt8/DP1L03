@@ -67,6 +67,7 @@ master.menu.administrator.customization.list = Customization
 
 master.menu.provider = Provider
 master.menu.provider.favourite-link = Favourite link
+master.menu.provider.request.create = Create Request
 
 # master.menu.consumer ##########################################################
 
