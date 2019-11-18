@@ -152,7 +152,7 @@
         `investing_statement` varchar(255),
         `name` varchar(255),
         `sector` varchar(255),
-        `stars` varchar(255),
+        `stars` integer,
         primary key (`id`)
     ) engine=InnoDB;
 

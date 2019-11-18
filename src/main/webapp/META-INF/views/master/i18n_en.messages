@@ -40,13 +40,14 @@ master.menu.anonymous.announcement.list = Announcement's list
 master.menu.anonymous.investor-record.list = Investor Record's list
 master.menu.anonymous.fav-link = Favourite link
 master.menu.anonymous.company-record = Company records's list
+master.menu.anonymous.investor-record.top = Top investor records
 
 # master.menu.authenticated #######################################################
 
 master.menu.authenticated = Authenticated
 master.menu.authenticated.offer = Active offers
 master.menu.authenticated.announcement = Announcement's list
-master.menu.authenticated.investor-record = Investors's list
+master.menu.authenticated.investor-record = Investor Record's list
 master.menu.authenticated.challenge.list = Challenges's list
 master.menu.authenticated.request.list = Requests's list
 master.menu.authenticated.company-record.list = Companies's list
@@ -62,6 +63,8 @@ master.menu.administrator.announcement.list = Announcement's list
 master.menu.administrator.customization.show = Customization
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.customization.list = Customization
+master.menu.administrator.investor-record.list = Investor record's list
+master.menu.administrator.investor-record.create = Create a investor record
 
 # master.menu.provider ########################################################
 

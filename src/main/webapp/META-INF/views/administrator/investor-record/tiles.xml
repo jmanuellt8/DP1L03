@@ -18,16 +18,12 @@
 
 <tiles-definitions>
 
-	<definition name="anonymous/investor-record/form" extends="master">		
-		<put-attribute name="body" type="template" value="../anonymous/investor-record/form.jsp" />
-	</definition>
-
-	<definition name="anonymous/investor-record/list" extends="master">		
-		<put-attribute name="body" type="template" value="../anonymous/investor-record/list.jsp" />
+	<definition name="administrator/investor-record/list" extends="master">		
+		<put-attribute name="body" type="template" value="../administrator/investor-record/list.jsp" />
 	</definition>
 	
-	<definition name="anonymous/investor-record/top" extends="master">		
-		<put-attribute name="body" type="template" value="../anonymous/investor-record/list.jsp" />
+	<definition name="administrator/investor-record/form" extends="master">		
+		<put-attribute name="body" type="template" value="../administrator/investor-record/form.jsp" />
 	</definition>
 
 </tiles-definitions>

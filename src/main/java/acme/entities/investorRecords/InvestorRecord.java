@@ -2,7 +2,10 @@
 package acme.entities.investorRecords;
 
 import javax.persistence.Entity;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -28,6 +31,9 @@ public class InvestorRecord extends DomainEntity {
 	@NotBlank
 	private String				investingStatement;
 
-	private String				stars;
+	@NotNull
+	@Min(0)
+	@Max(5)
+	private Integer				stars;
 
 }

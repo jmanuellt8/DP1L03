@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.investorRecord;
+package acme.features.anonymous.investorRecord;
 
 import java.util.Collection;
 
@@ -9,14 +9,14 @@ import org.springframework.stereotype.Service;
 import acme.entities.investorRecords.InvestorRecord;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
+import acme.framework.entities.Anonymous;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedInvestorRecordListService implements AbstractListService<Authenticated, InvestorRecord> {
+public class AnonymousInvestorRecordListTopFiveService implements AbstractListService<Anonymous, InvestorRecord> {
 
 	@Autowired
-	private AuthenticatedInvestorRecordRepository repository;
+	private AnonymousInvestorRecordRepository repository;
 
 
 	@Override
@@ -41,7 +41,7 @@ public class AuthenticatedInvestorRecordListService implements AbstractListServi
 		assert request != null;
 
 		//Another option for this findMany is findAll
-		return this.repository.findManyInvestorRecords();
+		return this.repository.findInvestorRecordsWithFiveStars();
 		//return null;
 	}
 
