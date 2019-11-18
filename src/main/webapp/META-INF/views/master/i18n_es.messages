@@ -51,8 +51,8 @@ master.menu.authenticated.investor-record = Lista de registro de inversionistas
 master.menu.authenticated.challenge.list = Lista de retos
 master.menu.authenticated.request.list = Lista de peticiones
 master.menu.authenticated.company-record.list = Lista de compañias
-master.menu.banner.list.non-commercial = Lista banners no comerciales
-master.menu.banner.list.commercial = Lista banners comerciales
+master.menu.banner.list.non-commercial = Lista baners no comerciales
+master.menu.banner.list.commercial = Lista baners comerciales
 
 # master.menu.administrator ###################################################
 
@@ -63,6 +63,8 @@ master.menu.administrator.announcement.list = Lista de anuncios
 master.menu.administrator.customization.show = Customizacion
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.customization.list = Customizacion
+master.menu.administrator.banner.non-commercial.list = Lista de baners no comercales
+master.menu.administrator.banner.commercial.list = Lista de baners comerciales
 master.menu.administrator.investor-record.list = Lista de registro de inversionistas
 master.menu.administrator.investor-record.create = Crear un registro de inversionistas
 

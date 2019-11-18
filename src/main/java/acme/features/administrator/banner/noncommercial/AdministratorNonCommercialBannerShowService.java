@@ -1,16 +1,18 @@
 
-package acme.features.authenticated.banner.noncommercial;
+package acme.features.administrator.banner.noncommercial;
 
 import acme.entities.banners.NonCommercialBanner;
+import acme.features.authenticated.banner.noncommercial.AuthenticatedNonCommercialBannerRepository;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Administrator;
 import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractShowService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AuthenticatedNonCommercialBannerShowService implements AbstractShowService<Authenticated, NonCommercialBanner> {
+public class AdministratorNonCommercialBannerShowService implements AbstractShowService<Administrator, NonCommercialBanner> {
 
 	@Autowired
 	private AuthenticatedNonCommercialBannerRepository repository;

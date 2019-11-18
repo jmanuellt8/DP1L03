@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.banner.noncommercial;
+package acme.features.administrator.banner.noncommercial;
 
 import acme.entities.banners.NonCommercialBanner;
 import acme.framework.repositories.AbstractRepository;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Collection;
 
 @Repository
-public interface AuthenticatedNonCommercialBannerRepository extends AbstractRepository {
+public interface AdministratorNonCommercialBannerRepository extends AbstractRepository {
 
 	@Query("select ncb from NonCommercialBanner ncb")
 	Collection<NonCommercialBanner> findMany();

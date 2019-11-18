@@ -10,24 +10,23 @@
 - they accept any liabilities with respect to them.
 --%>
 
-<%@page language="java"%>
+<%@page language="java" %>
 
-<%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
-<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="acme" tagdir="/WEB-INF/tags" %>
 
 <acme:form readonly="true">
-	<fieldset>
-		<legend>
-			<spring:message code="authenticated.banner.non-commercial.banner" />
-		</legend>
-		<acme:form-textbox code="authenticated.banner.non-commercial.picture" path="picture" />
-		<acme:form-textbox code="authenticated.banner.non-commercial.slogan" path="slogan" />
-		<acme:form-textbox code="authenticated.banner.non-commercial.targetURL" path="targetURL" />
-	</fieldset>
-	<fieldset>
-		<acme:form-textbox code="authenticated.banner.non-commercial.jingle" path="jingle" />
-	</fieldset>
+    <fieldset>
+        <legend>
+            <acme:message code="authenticated.banner.non-commercial.banner"/>
+        </legend>
+        <acme:form-textbox code="authenticated.banner.non-commercial.picture" path="picture"/>
+        <acme:form-textbox code="authenticated.banner.non-commercial.slogan" path="slogan"/>
+        <acme:form-textbox code="authenticated.banner.non-commercial.targetURL" path="targetURL"/>
+    </fieldset>
+    <fieldset>
+        <acme:form-textbox code="authenticated.banner.non-commercial.jingle" path="jingle"/>
+    </fieldset>
 
-	<acme:form-return code="authenticated.banner.non-commercial.form.button.return" />
+    <acme:form-return code="authenticated.banner.non-commercial.form.button.return"/>
 </acme:form>

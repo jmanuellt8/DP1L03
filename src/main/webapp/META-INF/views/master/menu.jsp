@@ -83,6 +83,10 @@
 			<acme:menu-suboption code="master.menu.administrator.announcement.list" action="/administrator/announcement/list"/>
         	<acme:menu-separator/>
         	<acme:menu-suboption code="master.menu.administrator.customization.list" action="/administrator/customization/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.banner.non-commercial.list" action="/administrator/commercial-banner/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.banner.commercial.list" action="/administrator/non-commercial-banner/list"/>
         	<acme:menu-separator/>
         	<acme:menu-suboption code="master.menu.administrator.investor-record.list" action="/administrator/investor-record/list"/>
         	<acme:menu-separator/>

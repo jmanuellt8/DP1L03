@@ -19,7 +19,7 @@
 <acme:form readonly="true">
 	<fieldset>
 	<legend>
-		<spring:message code="authenticated.banner.commercial.banner" />
+		<acme:message code="authenticated.banner.commercial.banner" />
 	</legend>
 		<acme:form-textbox code="authenticated.banner.commercial.picture" path="picture" />
 		<acme:form-textbox code="authenticated.banner.commercial.slogan" path="slogan" />
@@ -27,7 +27,7 @@
 	</fieldset>
 	<fieldset>
 		<legend>
-			<spring:message code="authenticated.banner.commercial.creditCard" />
+			<acme:message code="authenticated.banner.commercial.creditCard" />
 		</legend>
 		<acme:form-textbox code="authenticated.banner.commercial.brand" path="brand" />
 		<acme:form-textbox code="authenticated.banner.commercial.cvv" path="CVV" />
