@@ -40,6 +40,7 @@ master.menu.anonymous.announcement.list = Lista de anuncios
 master.menu.anonymous.investor-record.list = Lista de registro de inversionistas
 master.menu.anonymous.fav-link = Link favorito
 master.menu.anonymous.company-record = Registro de compañias
+master.menu.anonymous.company-record.top = Top registro de compañias
 master.menu.anonymous.investor-record.top = Top registro de inversionistas
 
 # master.menu.authenticated #######################################################
@@ -70,6 +71,8 @@ master.menu.administrator.banner.non-commercial.create = Crear baner no comercia
 master.menu.administrator.investor-record.list = Lista de registro de inversionistas
 master.menu.administrator.investor-record.create = Crear un registro de inversionistas
 master.menu.administrator.announcement.create = Crear anuncio
+master.menu.administrator.company-record.list = Compañias
+master.menu.administrator.company-record.create = Nueva Compañia
 
 # master.menu.provider ########################################################
 

@@ -5,8 +5,13 @@ import java.beans.Transient;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
+
+import org.hibernate.validator.constraints.URL;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -35,6 +40,7 @@ public class CompanyRecord extends DomainEntity {
 	@NotBlank
 	private String				activitiesDescription;
 
+	@URL
 	@NotBlank
 	private String				website;
 
@@ -46,7 +52,10 @@ public class CompanyRecord extends DomainEntity {
 	@NotBlank
 	private String				email;
 
-	private String				stars;
+	@NotNull
+	@Min(0)
+	@Max(5)
+	private Integer				stars;
 
 
 	// Derived Atributes --------------------------------------------------------------------------

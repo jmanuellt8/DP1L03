@@ -1,5 +1,5 @@
 
-package acme.features.anonymous.companyRecord;
+package acme.features.administrator.companyRecord;
 
 import java.util.Collection;
 
@@ -10,15 +10,12 @@ import acme.entities.records.CompanyRecord;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AnonymousCompanyRecordRepository extends AbstractRepository {
+public interface AdministratorCompanyRecordRepository extends AbstractRepository {
 
 	@Query("select cr from CompanyRecord cr where cr.id = ?1")
 	CompanyRecord findOneById(int id);
 
 	@Query("select cr from CompanyRecord cr")
 	Collection<CompanyRecord> findManyAll();
-
-	@Query("select cr from CompanyRecord cr where cr.stars = 5")
-	Collection<CompanyRecord> findTop();
 
 }

@@ -22,6 +22,8 @@
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 		    <acme:menu-suboption code="master.menu.anonymous.company-record" action="/anonymous/company-record/list"/>
 		    <acme:menu-separator/>
+		    <acme:menu-suboption code="master.menu.anonymous.company-record.top" action="/anonymous/company-record/top"/>
+		    <acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.announcement.list" action="/anonymous/announcement/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.investor-record.list" action="/anonymous/investor-record/list"/>
@@ -97,6 +99,10 @@
         	<acme:menu-suboption code="master.menu.administrator.investor-record.list" action="/administrator/investor-record/list"/>
         	<acme:menu-separator/>
         	<acme:menu-suboption code="master.menu.administrator.investor-record.create" action="/administrator/investor-record/create"/>
+        	<acme:menu-separator/>
+        	<acme:menu-suboption code="master.menu.administrator.company-record.list" action="/administrator/company-record/list"/>
+        	<acme:menu-separator/>
+        	<acme:menu-suboption code="master.menu.administrator.company-record.create" action="/administrator/company-record/create"/>
         </acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
