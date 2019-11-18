@@ -107,7 +107,7 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `entity_request` (
+    create table `request_` (
        `id` integer not null,
         `version` integer not null,
         `creation_moment` datetime(6),
@@ -235,7 +235,7 @@
 
     insert into `hibernate_sequence` values ( 1 );
 
-    alter table `entity_request` 
+    alter table `request_` 
        add constraint UK_ot0ivcmsn7qkso8gbc9k9itpb unique (`ticker`);
 
     alter table `offer` 

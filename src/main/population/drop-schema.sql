@@ -41,7 +41,7 @@
 
     drop table if exists `customization`;
 
-    drop table if exists `entity_request`;
+    drop table if exists `request_`;
 
     drop table if exists `garrido_bulletin`;
 
