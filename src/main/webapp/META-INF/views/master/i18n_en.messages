@@ -69,6 +69,7 @@ master.menu.administrator.banner.commercial.create = Create commercial banner
 master.menu.administrator.banner.non-commercial.create = Create non commercial banner
 master.menu.administrator.investor-record.list = Investor record's list
 master.menu.administrator.investor-record.create = Create a investor record
+master.menu.administrator.announcement.create = Create announcement
 
 # master.menu.provider ########################################################
 

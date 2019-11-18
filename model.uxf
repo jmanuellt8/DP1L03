@@ -338,7 +338,7 @@ has v</panel_attributes>
     <panel_attributes>Announcement
 --
 + title: String {NotBlank}
-+ moment: Date {Temporal{TIME}, Past, NotNull} 
++ moment: Date {Temporal{TIME}, Past} 
 + moreInfo: String {URL}
 + text: String {NotBlank}</panel_attributes>
     <additional_attributes/>

@@ -81,6 +81,8 @@
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.announcement.list" action="/administrator/announcement/list"/>
+			<acme:menu-separator/>
+        	<acme:menu-suboption code="master.menu.administrator.announcement.create" action="/administrator/announcement/create"/>
         	<acme:menu-separator/>
         	<acme:menu-suboption code="master.menu.administrator.customization.list" action="/administrator/customization/list"/>
 			<acme:menu-separator/>
