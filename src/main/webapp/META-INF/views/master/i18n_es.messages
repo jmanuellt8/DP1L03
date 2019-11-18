@@ -63,8 +63,10 @@ master.menu.administrator.announcement.list = Lista de anuncios
 master.menu.administrator.customization.show = Customizacion
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.customization.list = Customizacion
-master.menu.administrator.banner.non-commercial.list = Lista de baners no comercales
+master.menu.administrator.banner.non-commercial.list = Lista de baners no comerciales
 master.menu.administrator.banner.commercial.list = Lista de baners comerciales
+master.menu.administrator.banner.commercial.create = Crear baner comercial
+master.menu.administrator.banner.non-commercial.create = Crear baner no comercial
 master.menu.administrator.investor-record.list = Lista de registro de inversionistas
 master.menu.administrator.investor-record.create = Crear un registro de inversionistas
 

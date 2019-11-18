@@ -65,6 +65,8 @@ master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.customization.list = Customization
 master.menu.administrator.banner.non-commercial.list = Non commercial banners list
 master.menu.administrator.banner.commercial.list = Commercial banners list
+master.menu.administrator.banner.commercial.create = Create commercial banner
+master.menu.administrator.banner.non-commercial.create = Create non commercial banner
 master.menu.administrator.investor-record.list = Investor record's list
 master.menu.administrator.investor-record.create = Create a investor record
 
