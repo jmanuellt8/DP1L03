@@ -42,8 +42,7 @@ public class AdministratorCustomizationListService implements AbstractListServic
 		assert request != null;
 
 		Collection<Customization> result;
-
-		result = this.repository.findMany();
+		result = this.repository.findCustomization();
 
 		return result;
 	}
