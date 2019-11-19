@@ -53,7 +53,7 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 	public Request_ instantiate(final Request<Request_> request) {
 		Request_ result;
 		Date creationMoment;
-		Date deadline = new Date();
+		Date deadline = new Date(System.currentTimeMillis() + 100000);
 		Double reward = 0.0;
 
 		creationMoment = new Date(System.currentTimeMillis() - 1);
@@ -71,7 +71,6 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		assert request != null;
 		assert entity != null;
 
-		assert entity.getDeadline().after(new Date());
 		boolean confirmation;
 
 		confirmation = request.getModel().getBoolean("confirmation");

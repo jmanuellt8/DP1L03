@@ -6,6 +6,7 @@
 <acme:form>
 	<acme:form-textbox code="administrator.challenge.list.label.title" path="title" />
 	<acme:form-textarea code="administrator.challenge.list.label.description" path="description" />
+	<acme:form-moment code="administrator.challenge.list.label.deadline" path="deadline"/>
 	<acme:form-textbox code="administrator.challenge.list.label.goldGoal" path="goldGoal"/>
 	<acme:form-double code="administrator.challenge.list.label.goldReward" path="goldReward"/>
 	<acme:form-textbox code="administrator.challenge.list.label.silverGoal" path="silverGoal"/>
