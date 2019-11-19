@@ -55,7 +55,7 @@
 
 	<!-- REQUESTS -->
 
-	<bean id="request1" class="acme.entities.entityRequest.EntityRequest">
+	<bean id="request1" class="acme.entities.request.Request_">
 		<property name="ticker" value="RAVCD-12345" />
 		<property name="title" value="Junior Java Developer" />
 		<property name="description" value="job request fro Junior Java Developer" />
@@ -64,7 +64,7 @@
 		<property name="reward" value="2000.0" />
 	</bean>
 
-	<bean id="request2" class="acme.entities.entityRequest.EntityRequest">
+	<bean id="request2" class="acme.entities.request.Request_">
 		<property name="ticker" value="RAWCD-12345" />
 		<property name="title" value="Junior C Developer" />
 		<property name="description" value="job request for Junior C Developer" />
@@ -73,7 +73,7 @@
 		<property name="reward" value="200.0" />
 	</bean>
 
-	<bean id="request3" class="acme.entities.entityRequest.EntityRequest">
+	<bean id="request3" class="acme.entities.request.Request_">
 		<property name="ticker" value="RAXCD-12345" />
 		<property name="title" value="Junior Python Developer" />
 		<property name="description" value="job request for Junior Python Developer" />
@@ -82,7 +82,7 @@
 		<property name="reward" value="600.0" />
 	</bean>
 
-	<bean id="request4" class="acme.entities.entityRequest.EntityRequest">
+	<bean id="request4" class="acme.entities.request.Request_">
 		<property name="ticker" value="RAYCD-12345" />
 		<property name="title" value="Junior Angular Developer" />
 		<property name="description" value="job request for Junior Angular Developer" />

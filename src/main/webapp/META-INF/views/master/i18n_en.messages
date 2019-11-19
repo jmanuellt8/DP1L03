@@ -64,6 +64,8 @@ master.menu.administrator.announcement.list = Announcement's list
 master.menu.administrator.customization.show = Customization
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.customization.list = Customization
+master.menu.administrator.challenge.list = Challenges
+master.menu.administrator.challenge.create = Create Challenge
 master.menu.administrator.banner.non-commercial.list = Non commercial banners list
 master.menu.administrator.banner.commercial.list = Commercial banners list
 master.menu.administrator.banner.commercial.create = Create commercial banner
@@ -78,6 +80,7 @@ master.menu.administrator.company-record.create = New Company Record
 
 master.menu.provider = Provider
 master.menu.provider.favourite-link = Favourite link
+master.menu.provider.request.create = Create Request
 
 # master.menu.consumer ##########################################################
 

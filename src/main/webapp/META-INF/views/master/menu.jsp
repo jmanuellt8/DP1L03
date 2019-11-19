@@ -103,10 +103,16 @@
         	<acme:menu-suboption code="master.menu.administrator.company-record.list" action="/administrator/company-record/list"/>
         	<acme:menu-separator/>
         	<acme:menu-suboption code="master.menu.administrator.company-record.create" action="/administrator/company-record/create"/>
+        	<acme:menu-separator />	
+        	<acme:menu-suboption code="master.menu.administrator.challenge.list" action="/administrator/challenge/list"/>
+        	<acme:menu-separator />	
+        	<acme:menu-suboption code="master.menu.administrator.challenge.create" action="/administrator/challenge/create"/>
         </acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
-			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/" />
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.provider.request.create" action="/provider/request_/create" />
+			<acme:menu-separator />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
@@ -123,7 +129,7 @@
 			<acme:menu-separator />		
 			<acme:menu-suboption code="master.menu.authenticated.investor-record" action="/authenticated/investor-record/list" />
 			<acme:menu-separator />	
-			<acme:menu-suboption code="master.menu.authenticated.request.list" action="/authenticated/entity-request/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.request.list" action="/authenticated/request_/list"/>
 			<acme:menu-separator />	
 			<acme:menu-suboption code="master.menu.authenticated.challenge.list" action="/authenticated/challenge/list"/>
 			<acme:menu-separator />	

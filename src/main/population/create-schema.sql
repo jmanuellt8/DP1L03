@@ -106,18 +106,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `entity_request` (
-       `id` integer not null,
-        `version` integer not null,
-        `creation_moment` datetime(6),
-        `deadline` datetime(6),
-        `description` varchar(255),
-        `reward` double precision,
-        `ticker` varchar(255),
-        `title` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
     create table `garrido_bulletin` (
        `id` integer not null,
         `version` integer not null,
@@ -207,6 +195,18 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `request_` (
+       `id` integer not null,
+        `version` integer not null,
+        `creation_moment` datetime(6),
+        `deadline` datetime(6),
+        `description` varchar(255),
+        `reward` double precision,
+        `ticker` varchar(255),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `shout` (
        `id` integer not null,
         `version` integer not null,
@@ -239,11 +239,11 @@
 
     insert into `hibernate_sequence` values ( 1 );
 
-    alter table `entity_request` 
-       add constraint UK_ot0ivcmsn7qkso8gbc9k9itpb unique (`ticker`);
-
     alter table `offer` 
        add constraint UK_iex7e8fs0fh89yxpcnm1orjkm unique (`ticker`);
+
+    alter table `request_` 
+       add constraint UK_4kaq4lybvdlfnbqjbdbwjlqkl unique (`ticker`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
