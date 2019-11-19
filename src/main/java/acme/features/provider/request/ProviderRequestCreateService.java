@@ -46,6 +46,7 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		assert model != null;
 
 		request.unbind(entity, model, "ticker", "title", "description", "deadline", "reward");
+		model.setAttribute("confirmation", false);
 	}
 
 	@Override
@@ -63,6 +64,10 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		assert entity != null;
 
 		assert entity.getDeadline().after(new Date());
+		boolean confirmation;
+
+		confirmation = request.getModel().getBoolean("confirmation");
+		errors.state(request, confirmation, "confirmation", "acme.validation.request.confirmation");
 
 		assert errors != null;
 

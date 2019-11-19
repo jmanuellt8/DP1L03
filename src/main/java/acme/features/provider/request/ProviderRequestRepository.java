@@ -13,7 +13,7 @@ import acme.framework.repositories.AbstractRepository;
 public interface ProviderRequestRepository extends AbstractRepository {
 
 	@Query("select r from Request_ r where r.id = ?1")
-	Request_ findOneOfferById(int id);
+	Request_ findOneRequestById(int id);
 
 	@Query("select r from Request_ r")
 	Collection<Request_> findMany();

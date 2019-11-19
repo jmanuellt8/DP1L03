@@ -9,7 +9,7 @@
 	<acme:form-textarea code="authenticated.request.list.label.description" path="description" />
 	<acme:form-moment code="authenticated.request.list.label.creationMoment" path="creationMoment" readonly="true"/>
 	<acme:form-moment code="authenticated.request.list.label.deadline" path="deadline"/>
-	<acme:form-money code="authenticated.request.list.label.reward" path="reward"/>
+	<acme:form-double code="authenticated.request.list.label.reward" path="reward"/>
 
 	<acme:form-return code="authenticated.request.form.button.return" />
 </acme:form> 

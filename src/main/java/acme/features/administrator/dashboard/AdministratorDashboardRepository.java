@@ -22,16 +22,16 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select count(cr) from CompanyRecord cr")
 	Integer countCR();
 
-	@Query("select min(r.reward) * 1.0 from EntityRequest r")
+	@Query("select min(r.reward) * 1.0 from Request_ r")
 	Double minEntityRequest();
 
-	@Query("select  max(r.reward) * 1.0 from EntityRequest r")
+	@Query("select  max(r.reward) * 1.0 from Request_ r")
 	Double maxEntityRequest();
 
-	@Query("select avg(r.reward)*1.0 from EntityRequest r")
+	@Query("select avg(r.reward)*1.0 from Request_ r")
 	Double avgEntityRequest();
 
-	@Query("select stddev(r.reward) * 1.0 from EntityRequest r")
+	@Query("select stddev(r.reward) * 1.0 from Request_ r")
 	Double stddevEntityRequest();
 
 	@Query("select min(o.rangeFrom.amount) From Offer o")

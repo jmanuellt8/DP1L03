@@ -13,7 +13,7 @@ import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/authenticated/request/")
+@RequestMapping("/authenticated/request_/")
 public class AuthenticatedRequestController extends AbstractController<Authenticated, Request_> {
 
 	// Internal state ---------------------------------------------------------

@@ -7,11 +7,11 @@
 
 <tiles-definitions>
 
-	<definition name="authenticated/request/list" extends="master">
+	<definition name="authenticated/request_/list" extends="master">
 		<put-attribute name="body" type="template" value="../authenticated/request/list.jsp" />
 	</definition>
 
-	<definition name="authenticated/request/form" extends="master">
+	<definition name="authenticated/request_/form" extends="master">
 		<put-attribute name="body" type="template" value="../authenticated/request/form.jsp" />
 	</definition>
 

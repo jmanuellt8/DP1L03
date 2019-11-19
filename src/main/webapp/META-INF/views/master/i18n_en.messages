@@ -62,6 +62,8 @@ master.menu.administrator.announcement.list = Announcement's list
 master.menu.administrator.customization.show = Customization
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.customization.list = Customization
+master.menu.administrator.challenge.list = Challenges
+master.menu.administrator.challenge.create = Create Challenge
 
 # master.menu.provider ########################################################
 

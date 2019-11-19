@@ -41,8 +41,6 @@
 
     drop table if exists `customization`;
 
-    drop table if exists `request_`;
-
     drop table if exists `garrido_bulletin`;
 
     drop table if exists `guerrero_bulletin`;
@@ -60,6 +58,8 @@
     drop table if exists `perez_bulletin`;
 
     drop table if exists `provider`;
+
+    drop table if exists `request_`;
 
     drop table if exists `shout`;
 

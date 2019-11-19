@@ -13,19 +13,27 @@ import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 
 @Controller
-@RequestMapping("/provider/request/")
+@RequestMapping("/provider/request_/")
 public class ProviderRequestController extends AbstractController<Provider, Request_> {
 
 	// Internal state --------------------------------------------------------
 
 	@Autowired
-	private ProviderRequestCreateService createService;
+	private ProviderRequestCreateService	createService;
+
+	@Autowired
+	private ProviderRequestListService		listService;
+
+	@Autowired
+	private ProviderRequestShowService		showService;
+
 
 	// Constructors -----------------------------------------------------------
 
-
 	@PostConstruct
 	private void initialise() {
+		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 	}
 

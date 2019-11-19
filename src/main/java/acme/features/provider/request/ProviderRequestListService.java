@@ -1,22 +1,24 @@
 
-package acme.features.authenticated.request;
+package acme.features.provider.request;
+
+import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.request.Request_;
+import acme.entities.roles.Provider;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
-import acme.framework.services.AbstractShowService;
+import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedRequestShowService implements AbstractShowService<Authenticated, Request_> {
+public class ProviderRequestListService implements AbstractListService<Provider, Request_> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AuthenticatedRequestRepository repository;
+	private ProviderRequestRepository repository;
 
 
 	@Override
@@ -36,14 +38,12 @@ public class AuthenticatedRequestShowService implements AbstractShowService<Auth
 	}
 
 	@Override
-	public Request_ findOne(final Request<Request_> request) {
+	public Collection<Request_> findMany(final Request<Request_> request) {
 		assert request != null;
 
-		Request_ result;
-		int id;
+		Collection<Request_> result;
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneRequestById(id);
+		result = this.repository.findMany();
 
 		return result;
 	}

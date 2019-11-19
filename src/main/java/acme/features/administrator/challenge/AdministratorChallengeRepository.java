@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.challenge;
+package acme.features.administrator.challenge;
 
 import java.util.Collection;
 
@@ -10,12 +10,12 @@ import acme.entities.challenges.Challenge;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AuthenticatedChallengeRepository extends AbstractRepository {
+public interface AdministratorChallengeRepository extends AbstractRepository {
 
 	@Query("select c from Challenge c where c.id = ?1")
 	Challenge findOneChallengeById(int id);
 
 	@Query("select c from Challenge c")
-	Collection<Challenge> findMany();
+	Collection<Challenge> findManyChallenges();
 
 }

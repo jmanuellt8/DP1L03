@@ -81,11 +81,15 @@
 			<acme:menu-suboption code="master.menu.administrator.announcement.list" action="/administrator/announcement/list"/>
         	<acme:menu-separator/>
         	<acme:menu-suboption code="master.menu.administrator.customization.list" action="/administrator/customization/list"/>
+        	<acme:menu-separator />	
+        	<acme:menu-suboption code="master.menu.administrator.challenge.list" action="/administrator/challenge/list"/>
+        	<acme:menu-separator />	
+        	<acme:menu-suboption code="master.menu.administrator.challenge.create" action="/administrator/challenge/create"/>
         </acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-separator />
-			<acme:menu-suboption code="master.menu.provider.request.create" action="/provider/request/create" />
+			<acme:menu-suboption code="master.menu.provider.request.create" action="/provider/request_/create" />
 			<acme:menu-separator />
 		</acme:menu-option>
 
@@ -100,7 +104,7 @@
 			<acme:menu-separator />		
 			<acme:menu-suboption code="master.menu.authenticated.investor-record" action="/authenticated/investor-record/list" />
 			<acme:menu-separator />	
-			<acme:menu-suboption code="master.menu.authenticated.request.list" action="/authenticated/entity-request/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.request.list" action="/authenticated/request_/list"/>
 			<acme:menu-separator />	
 			<acme:menu-suboption code="master.menu.authenticated.challenge.list" action="/authenticated/challenge/list"/>
 			<acme:menu-separator />	
