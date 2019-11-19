@@ -59,58 +59,60 @@
 </fieldset>
 
 <script type="text/javascript">
-    var data = {
-        labels: [],
-        datasets:
-            [
-                <jstl:forEach var="i" begin="0" end="${fn:length(amountCompany) - 1}">
-                {
-                    label: "\"${textCompany[i]}\"",
-                    data: [${amountCompany[i]}],
-                    backgroundColor: "#ff0000"
-                },
-                </jstl:forEach>
-                <jstl:forEach var="i" begin="0" end="${fn:length(textIR) - 1}">
-                <jstl:if test="${i != fn:length(textIR) - 1}">
-                {
-                    label: "\"${textIR[i]}\"",
-                    data: [${amountIR[i]}],
-                    backgroundColor: "#0000ff"
-                },
-                </jstl:if>
-                <jstl:if test="${i == fn:length(textIR) - 1}">
-                {
-                    label: "\"${textIR[i]}\"",
-                    data: [${amountIR[i]}],
-                    backgroundColor: "#0000ff"
-                }
-                </jstl:if>
-                </jstl:forEach>
-            ]
-    };
 
-    var options =
-        {
-            legend: {display: false},
-            scales:
-                {
-                    yAxes: [{
-                        ticks: {
-                            suggestedMin: 0.0
-                        }
-                    }]
-                }
-        };
+    <jstl:if test="${fn:length(amountCompany) != 0 || fn:length(amountIR) != 0}">
+	var data = {
+		labels: [],
+		datasets:
+				[
+					<jstl:forEach var="i" begin="0" end="${fn:length(amountCompany) - 1}">
+					{
+						label: "\"${textCompany[i]}\"",
+						data: [${amountCompany[i]}],
+						backgroundColor: "#ff0000"
+					},
+					</jstl:forEach>
+					<jstl:forEach var="i" begin="0" end="${fn:length(textIR) - 1}">
+					<jstl:if test="${i != fn:length(textIR) - 1}">
+					{
+						label: "\"${textIR[i]}\"",
+						data: [${amountIR[i]}],
+						backgroundColor: "#0000ff"
+					},
+					</jstl:if>
+					<jstl:if test="${i == fn:length(textIR) - 1}">
+					{
+						label: "\"${textIR[i]}\"",
+						data: [${amountIR[i]}],
+						backgroundColor: "#0000ff"
+					}
+					</jstl:if>
+					</jstl:forEach>
+				]
+	};
 
-    var canvas = document.getElementById("canvas");
-    var context = canvas.getContext("2d");
-    new Chart
-    (
-        context,
-        {
-            type: "bar",
-            data: data,
-            options: options
-        }
-    )
+	var options =
+			{
+				legend: {display: false},
+				scales:
+						{
+							yAxes: [{
+								ticks: {
+									suggestedMin: 0.0
+								}
+							}]
+						}
+			};
+	var canvas = document.getElementById("canvas");
+	var context = canvas.getContext("2d");
+	new Chart
+	(
+			context,
+			{
+				type: "bar",
+				data: data,
+				options: options
+			}
+	)
+	</jstl:if>
 </script>

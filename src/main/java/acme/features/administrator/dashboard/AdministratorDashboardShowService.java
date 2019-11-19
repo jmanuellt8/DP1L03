@@ -47,16 +47,16 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		dashboard.setNumberOfCompanyRecords(this.repository.countCR());
 		dashboard.setNumberOfInvestorRecords(this.repository.countIR());
 
-		dashboard.setMinimumRewardsRequest(this.repository.minEntityRequest());
-		dashboard.setMaximumRewardsRequest(this.repository.maxEntityRequest());
-		dashboard.setAvgRewardsRequest(this.repository.avgEntityRequest());
-		dashboard.setStddevRewardsRequest(this.repository.stddevEntityRequest());
+		dashboard.setMinimumRewardsRequest(this.repository.minEntityRequest() == null ? 0. : this.repository.minEntityRequest());
+		dashboard.setMaximumRewardsRequest(this.repository.maxEntityRequest() == null ? 0. : this.repository.maxEntityRequest());
+		dashboard.setAvgRewardsRequest(this.repository.avgEntityRequest() == null ? 0. : this.repository.avgEntityRequest());
+		dashboard.setStddevRewardsRequest(this.repository.stddevEntityRequest() == null ? 0. : this.repository.stddevEntityRequest());
 
-		dashboard.setMinimumRewardsOffers(this.repository.minOffer());
-		dashboard.setMaximumRewardsOffers(this.repository.maxOffer());
-		dashboard.setAvgRewardsOffers(this.repository.avgOffer());
-		dashboard.setStddevRewardsOffersFrom(this.repository.fromStddev());
-		dashboard.setStddevRewardsOffersTo(this.repository.toStddev());
+		dashboard.setMinimumRewardsOffers(this.repository.minOffer() == null ? 0. : this.repository.minOffer());
+		dashboard.setMaximumRewardsOffers(this.repository.maxOffer() == null ? 0. : this.repository.maxOffer());
+		dashboard.setAvgRewardsOffers(this.repository.avgOffer() == null ? 0. : this.repository.avgOffer());
+		dashboard.setStddevRewardsOffersFrom(this.repository.fromStddev() == null ? 0. : this.repository.fromStddev());
+		dashboard.setStddevRewardsOffersTo(this.repository.toStddev() == null ? 0. : this.repository.toStddev());
 
 		List<Object[]> result = this.repository.companyRecordGroupedBySector();
 		List<String> text = new ArrayList<>();
