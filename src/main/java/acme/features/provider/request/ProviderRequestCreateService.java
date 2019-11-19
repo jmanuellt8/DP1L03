@@ -52,8 +52,16 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 	@Override
 	public Request_ instantiate(final Request<Request_> request) {
 		Request_ result;
+		Date creationMoment;
+		Date deadline = new Date();
+		Double reward = 0.0;
+
+		creationMoment = new Date(System.currentTimeMillis() - 1);
 
 		result = new Request_();
+		result.setCreationMoment(creationMoment);
+		result.setDeadline(deadline);
+		result.setReward(reward);
 
 		return result;
 	}
@@ -75,10 +83,7 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 
 	@Override
 	public void create(final Request<Request_> request, final Request_ entity) {
-		Date creationMoment;
 
-		creationMoment = new Date(System.currentTimeMillis() - 1);
-		entity.setCreationMoment(creationMoment);
 		this.repository.save(entity);
 	}
 
