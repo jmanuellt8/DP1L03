@@ -35,6 +35,7 @@ public class AdministratorCustomizationController extends AbstractController<Adm
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+
 	}
 
 }

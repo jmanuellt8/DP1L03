@@ -102,7 +102,6 @@
     create table `customization` (
        `id` integer not null,
         `version` integer not null,
-        `spam_words` varchar(255),
         `threshold` double precision,
         primary key (`id`)
     ) engine=InnoDB;
@@ -229,6 +228,11 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `customization_spam_words` (
+       `customization_id` integer not null,
+        `spam_words` varchar(255)
+    ) engine=InnoDB;
+
     create table `hibernate_sequence` (
        `next_val` bigint
     ) engine=InnoDB;
@@ -268,3 +272,8 @@
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `customization_spam_words` 
+       add constraint `FKrev29k0hr5464w9aqkkkdj1vg` 
+       foreign key (`customization_id`) 
+       references `customization` (`id`);

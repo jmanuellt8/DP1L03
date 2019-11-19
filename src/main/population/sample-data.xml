@@ -13,7 +13,23 @@
 		<!-- CUSTOMIZATION -->
 	
 	<bean id="customization" class="acme.entities.customization.Customization">
-	<property name = "spamWords" value="sex,hardcore,viagra,cialis,nigeria,you've won,you have won,million dollar,sexo,explícito,ha ganado,has ganado,millón de dólares" />
+	<property name = "spamWords">
+		<list>
+			<value>sex</value>
+			<value>hardcore</value>
+			<value>viagra</value>
+			<value>cialis</value>
+			<value>nigeria</value>
+			<value>you've won</value>
+			<value>you have won</value>
+			<value>million dollar</value>	
+			<value>sexo</value>
+			<value>explícito</value>
+			<value>ha ganado</value>
+			<value>has ganado</value>
+			<value>millón de dólares</value>
+		</list> 
+	</property>
 	<property name="threshold" value="1.00"/>
 	</bean>
 
@@ -498,5 +514,5 @@
 		<property name="stars" value="4">
 		</property>
 	</bean>
-
+	
 </beans>

@@ -13,7 +13,7 @@ import acme.framework.repositories.AbstractRepository;
 public interface AdministratorCustomizationRepository extends AbstractRepository {
 
 	@Query("select c from Customization c")
-	Collection<Customization> findMany();
+	Collection<Customization> findCustomization();
 
 	@Query("select c from Customization c where c.id = ?1")
 	Customization findOneById(int id);
