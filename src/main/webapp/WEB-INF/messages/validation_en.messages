@@ -45,5 +45,9 @@ acme.validation.script = Script expression "{0}" must return true
 acme.validation.euros-to = Currency must be EUR
 acme.validation.euros-from = Currency must be EUR 
 acme.validation.offer.confirmation = Creation not confirmed
-
+acme.validation.customization.threshold = Must be between 0 and 100
+acme.validation.customization.spamWords = Default words can not be modified
+acme.validation.offer.rangeTo.greater = Must be greater than 0
+acme.validation.offer.rangeFrom.greater = Must be greater than 0
+acme.validation.offer.rangeTo.correct = Must be greater or equal to Reward from
 
