@@ -75,7 +75,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.carruibri" action="https://www.linkedin.com/in/carlos-ruiz-briones-bb8401173/"/>
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
+		<acme:menu-option code="master.menu.administrator.list" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"/>
@@ -84,30 +84,32 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.announcement.list" action="/administrator/announcement/list"/>
 			<acme:menu-separator/>
-        	<acme:menu-suboption code="master.menu.administrator.announcement.create" action="/administrator/announcement/create"/>
-        	<acme:menu-separator/>
         	<acme:menu-suboption code="master.menu.administrator.customization.list" action="/administrator/customization/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.banner.commercial.list" action="/administrator/commercial-banner/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.banner.non-commercial.list" action="/administrator/non-commercial-banner/list"/>
+        	<acme:menu-separator/>     	
+        	<acme:menu-suboption code="master.menu.administrator.investor-record.list" action="/administrator/investor-record/list"/>
+        	<acme:menu-separator/>
+        	<acme:menu-suboption code="master.menu.administrator.company-record.list" action="/administrator/company-record/list"/>
+        	<acme:menu-separator/>
+        	<acme:menu-suboption code="master.menu.administrator.challenge.list" action="/administrator/challenge/list"/>
+            </acme:menu-option>
+        
+        <acme:menu-option code="master.menu.administrator.create" access="hasRole('Administrator')">			
+        	<acme:menu-suboption code="master.menu.administrator.announcement.create" action="/administrator/announcement/create"/>
         	<acme:menu-separator/>
         	<acme:menu-suboption code="master.menu.administrator.banner.commercial.create" action="/administrator/commercial-banner/create"/>
         	<acme:menu-separator/>
         	<acme:menu-suboption code="master.menu.administrator.banner.non-commercial.create" action="/administrator/non-commercial-banner/create"/>
-        	<acme:menu-separator/>        	
-        	<acme:menu-suboption code="master.menu.administrator.investor-record.list" action="/administrator/investor-record/list"/>
         	<acme:menu-separator/>
         	<acme:menu-suboption code="master.menu.administrator.investor-record.create" action="/administrator/investor-record/create"/>
         	<acme:menu-separator/>
-        	<acme:menu-suboption code="master.menu.administrator.company-record.list" action="/administrator/company-record/list"/>
-        	<acme:menu-separator/>
         	<acme:menu-suboption code="master.menu.administrator.company-record.create" action="/administrator/company-record/create"/>
         	<acme:menu-separator />	
-        	<acme:menu-suboption code="master.menu.administrator.challenge.list" action="/administrator/challenge/list"/>
-        	<acme:menu-separator />	
         	<acme:menu-suboption code="master.menu.administrator.challenge.create" action="/administrator/challenge/create"/>
-        </acme:menu-option>
+            </acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-separator />
@@ -116,8 +118,6 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
-			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/" />
-			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.consumer.offer.create" action="/consumer/offer/create" />
 			<acme:menu-separator />
 		</acme:menu-option>

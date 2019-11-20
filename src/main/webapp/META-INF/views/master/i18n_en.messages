@@ -63,18 +63,20 @@ master.menu.administrator.shutdown = Shut down
 master.menu.administrator.announcement.list = Announcement's list
 master.menu.administrator.customization.show = Customization
 master.menu.administrator.dashboard = Dashboard
-master.menu.administrator.customization.list = Customization
-master.menu.administrator.challenge.list = Challenges
+master.menu.administrator.customization.list = Customization's list
+master.menu.administrator.challenge.list = Challenge's list
 master.menu.administrator.challenge.create = Create Challenge
-master.menu.administrator.banner.non-commercial.list = Non commercial banners list
-master.menu.administrator.banner.commercial.list = Commercial banners list
+master.menu.administrator.banner.non-commercial.list = Non commercial banner's list
+master.menu.administrator.banner.commercial.list = Commercial banner's list
 master.menu.administrator.banner.commercial.create = Create commercial banner
 master.menu.administrator.banner.non-commercial.create = Create non commercial banner
 master.menu.administrator.investor-record.list = Investor record's list
-master.menu.administrator.investor-record.create = Create a investor record
+master.menu.administrator.investor-record.create = Create investor record
 master.menu.administrator.announcement.create = Create announcement
-master.menu.administrator.company-record.list = Company Records
-master.menu.administrator.company-record.create = New Company Record
+master.menu.administrator.company-record.list = Company Record's list
+master.menu.administrator.company-record.create = Create Company Record
+master.menu.administrator.create = Creates to Administrator
+master.menu.administrator.list = Lists to Administrator
 
 # master.menu.provider ########################################################
 

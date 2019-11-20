@@ -63,8 +63,8 @@ master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.announcement.list = Lista de anuncios
 master.menu.administrator.customization.show = Customizacion
 master.menu.administrator.dashboard = Dashboard
-master.menu.administrator.customization.list = Customizacion
-master.menu.administrator.challenge.list = Retos
+master.menu.administrator.customization.list = Lista de Customizacion
+master.menu.administrator.challenge.list = Lista de retos
 master.menu.administrator.challenge.create = Crear Reto
 master.menu.administrator.banner.non-commercial.list = Lista de baners no comerciales
 master.menu.administrator.banner.commercial.list = Lista de baners comerciales
@@ -73,8 +73,10 @@ master.menu.administrator.banner.non-commercial.create = Crear baner no comercia
 master.menu.administrator.investor-record.list = Lista de registro de inversionistas
 master.menu.administrator.investor-record.create = Crear un registro de inversionistas
 master.menu.administrator.announcement.create = Crear anuncio
-master.menu.administrator.company-record.list = Compañias
-master.menu.administrator.company-record.create = Nueva Compañia
+master.menu.administrator.company-record.list = Lista de compañias
+master.menu.administrator.company-record.create = Crear compañia
+master.menu.administrator.list = Listas para Administrador
+master.menu.administrator.create = Crear para Administrador
 
 # master.menu.provider ########################################################
 
