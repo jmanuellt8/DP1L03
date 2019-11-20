@@ -371,7 +371,7 @@ has v</panel_attributes>
 + name: String {NotBlank}
 + sector: String {NotBlank}
 + investingStatement: String {NotBlank}
-+ stars: String {NotNull, Min(0), Max(5)}</panel_attributes>
++ stars: Integer {NotNull, Min(0), Max(5)}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -575,8 +575,22 @@ has v</panel_attributes>
 + website: String {NotBlank, URL}
 + phone: String {NotBlank, Pattern(regexp="^\\+{0,1}[0-9]{0,3}\\s{0,1}\\({0,1}[0-9]{0,4}\\){0,1}\\s{0,1}[0-9]{6}[0-9]{0,4}$" )}
 + email: String {NotBlank, Email}
-+ stars: String {NotNull, Min(0),Max(5)}
++ stars: Integer {NotNull, Min(0),Max(5)}
 + incorporated: Boolean {NotNull}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>1800</y>
+      <w>280</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Customization
+--
++ spamWords: String {NotBlank}
++ thresold: Double{NotNull}</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
