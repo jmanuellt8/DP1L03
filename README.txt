@@ -24,3 +24,7 @@ Correcciones:
 	-Se ha cambiado el nombre de la entidad EntityRequest a Request_
 	-Se ha añadido la anotacion de NotNull en la propiedad deadline de las entidades Request_,
 		Challenge y Offer
+	-De AuthenticatedChallengeRepository y AuthenticatedRequestRepository se cambiaron los nombres
+		de los metodos a findOneChallengeById y findOneRequestById respectivamente
+	-En form.jsp de authenticated-request, se cambio acme:form-money por acme:form-double
+	-En form.jsp de authenticated challenge se añadio una linea para mostrar el deadline
