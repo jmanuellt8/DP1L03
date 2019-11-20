@@ -19,10 +19,6 @@
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
 
-    alter table `customization_spam_words` 
-       drop 
-       foreign key `FKrev29k0hr5464w9aqkkkdj1vg`;
-
     drop table if exists `administrator`;
 
     drop table if exists `announcement`;
@@ -68,7 +64,5 @@
     drop table if exists `shout`;
 
     drop table if exists `user_account`;
-
-    drop table if exists `customization_spam_words`;
 
     drop table if exists `hibernate_sequence`;

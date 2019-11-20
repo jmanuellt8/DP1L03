@@ -1,6 +1,9 @@
 
 package acme.features.administrator.customization;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -64,6 +67,17 @@ public class AdministratorCustomizationUpdateService implements AbstractUpdateSe
 		assert entity != null;
 		assert errors != null;
 
+		boolean isGreaterOrLess, isDefault = true;
+		List<String> def = Arrays.asList("sex", "hardcore", "viagra", "cialis", "nigeria", "you've won", "you have won", "million dollar", "sexo,explícito", "ha ganado", "has ganado", "millón de dólares");
+		for (String s : def) {
+			if (!request.getModel().getString("spamWords").contains(s)) {
+				isDefault = false;
+			}
+		}
+		errors.state(request, isDefault, "spamWords", "acme.validation.customization.spamWords");
+
+		isGreaterOrLess = request.getModel().getDouble("threshold") >= 0 && request.getModel().getDouble("threshold") <= 100;
+		errors.state(request, isGreaterOrLess, "threshold", "acme.validation.customization.threshold");
 	}
 
 	@Override

@@ -62,12 +62,38 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert errors != null;
 
-		boolean isEurosRangeTo, isEurosRangeFrom, confirmation;
+		boolean isEurosRangeTo, isEurosRangeFrom, confirmation, isRangeCorrect;
 
 		isEurosRangeTo = request.getModel().getString("rangeTo").trim().startsWith("EUR") || request.getModel().getString("rangeTo").trim().endsWith("EUR") || request.getModel().getString("rangeTo").isEmpty();
 		isEurosRangeFrom = request.getModel().getString("rangeFrom").trim().startsWith("EUR") || request.getModel().getString("rangeFrom").trim().endsWith("EUR") || request.getModel().getString("rangeFrom").isEmpty();
 		errors.state(request, isEurosRangeTo, "rangeTo", "acme.validation.offer.euros-to");
 		errors.state(request, isEurosRangeFrom, "rangeFrom", "acme.validation.offer.euros-from");
+
+		String rangeToS = request.getModel().getString("rangeTo");
+		String rangeFromS = request.getModel().getString("rangeFrom");
+		Double rangeFrom = 0.0;
+		Double rangeTo = 0.0;
+
+		if (rangeToS.contains("EUR")) {
+			if (request.getLocale().getDisplayLanguage().equals("Spanish")) {
+				rangeToS = rangeToS.replace("EUR", "").replace(".", "").replace(",", ".").trim();
+			} else {
+				rangeToS = rangeToS.replace("EUR", "").replace(",", "").trim();
+			}
+			rangeTo = new Double(rangeToS);
+		}
+
+		if (rangeFromS.contains("EUR")) {
+			if (request.getLocale().getDisplayLanguage().equals("Spanish")) {
+				rangeFromS = rangeFromS.replace("EUR", "").replace(".", "").replace(",", ".").trim();
+			} else {
+				rangeFromS = rangeFromS.replace("EUR", "").replace(",", "").trim();
+			}
+			rangeFrom = new Double(rangeFromS);
+		}
+
+		isRangeCorrect = rangeFrom <= rangeTo;
+		errors.state(request, isRangeCorrect, "rangeTo", "acme.validation.offer.rangeTo.correct");
 
 		confirmation = request.getModel().getBoolean("confirmation");
 		errors.state(request, confirmation, "confirmation", "acme.validation.offer.confirmation");
