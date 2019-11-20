@@ -46,3 +46,5 @@ acme.validation.offer.euros-to = La unidad monetaria debe ser EUR
 acme.validation.offer.euros-from = La unidad monetaria debe ser EUR
 acme.validation.offer.confirmation = Creación no confirmada
 acme.validation.request.confirmation = Creación no confirmada
+acme.validation.challenge.silverReward = La recompensa de plata debe ser menor que la recompensa de oro
+acme.validation.challenge.bronzeReward = La recompensa de bronce debe ser menor que la recompensa de plata

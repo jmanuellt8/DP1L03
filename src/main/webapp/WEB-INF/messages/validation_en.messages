@@ -45,3 +45,5 @@ acme.validation.euros-to = Currency must be EUR
 acme.validation.euros-from = Currency must be EUR 
 acme.validation.offer.confirmation = Creation not confirmed
 acme.validation.request.confirmation = Creation not confirmed
+acme.validation.challenge.silverReward = Silver Reward must be lesser than Gold Reward
+acme.validation.challenge.bronzeReward = Bronze Reward must be lesser than Silver Reward

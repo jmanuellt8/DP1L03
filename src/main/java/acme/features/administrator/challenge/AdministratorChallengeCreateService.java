@@ -60,6 +60,24 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		boolean validation1;
+		boolean validation2;
+		boolean validation3;
+		boolean validation4;
+		Double goldReward = request.getModel().getDouble("goldReward");
+		Double silverReward = request.getModel().getDouble("silverReward");
+		Double bronzeReward = request.getModel().getDouble("bronzeReward");
+
+		validation1 = silverReward != null;
+		validation2 = bronzeReward != null;
+		errors.state(request, validation1, "silverReward", "javax.validation.constraints.NotNull.message");
+		errors.state(request, validation2, "bronzeReward", "javax.validation.constraints.NotNull.message");
+		validation3 = silverReward != null && goldReward != null && silverReward.compareTo(goldReward) < 0;
+		validation4 = bronzeReward != null && silverReward != null && bronzeReward.compareTo(silverReward) < 0;
+
+		errors.state(request, validation3, "silverReward", "acme.validation.challenge.silverReward");
+		errors.state(request, validation4, "bronzeReward", "acme.validation.challenge.bronzeReward");
 	}
 
 	@Override
